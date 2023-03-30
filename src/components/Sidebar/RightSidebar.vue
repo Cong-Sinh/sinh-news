@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import ListRight from './CategoryRight/ListRight.vue';
+import ListRight from './StructureRight/ListRight.vue';
 export default {
   components: {
     ListRight

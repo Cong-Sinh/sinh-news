@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import List from './CategoryLeft/List.vue';
+import List from './StructureLeft/List.vue';
 export default {
   components: {
     List

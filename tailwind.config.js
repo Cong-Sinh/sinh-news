@@ -73,6 +73,9 @@ module.exports = {
         font: "'Inter', sans-serif",
       },
     },
+    backgroundImage: {
+      hi: "url('@/asset/img/Home1.png')",
+    },
   },
   plugins: [],
 };
