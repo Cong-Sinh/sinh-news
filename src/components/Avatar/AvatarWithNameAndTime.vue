@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center">
-    <AvatarWithName :src="src" :name="name" :width="width" :height="height" :titleClass="titleClass" />
+    <AvatarWithName :src="src" :name="name" :titleClass="titleClass" />
     <img srcset="@/assets/img/Icon..png 2x" alt="Meey News" class="w-1 h-1 mx-2" />
     <p class="text-Grey5 text-text4">{{ time }}</p>
   </div>
