@@ -53,6 +53,7 @@ module.exports = {
         Background3: "#ECF0F6",
         Background4: "#343434",
         Background5: "#104FD9",
+        Background6: "#f6f6f6",
 
         fff: "#fff",
       },

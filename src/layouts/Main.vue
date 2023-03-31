@@ -17,14 +17,18 @@
         <ArticleCard />
         <!-- content-post -->
 
-        <Loading />
+
+
 
         <Complete />
       </div>
 
-    </main>
 
+    </main>
     <RightSidebar />
+
+
+
   </div>
 </template>
 

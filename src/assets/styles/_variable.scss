@@ -12,6 +12,17 @@
 
 }
 
+.down::after{
+    content: "";
+    position: absolute;
+    left: 8px;
+    bottom: -18px;
+    clip-path: polygon(49% 43%, 0 0, 100% 0);
+    background-color: white;
+}
+
+
+
 .content-navbar-right {
     display: -webkit-box;
     -webkit-box-orient: vertical;

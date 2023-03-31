@@ -3,7 +3,8 @@
         <div class="flex items-center w-[220px] mr-[10px] h-10">
 
             <span color="bg-[#8BAFE5]" class="bg-[#FD867E] w-3 h-3 border-[1px] rounded-[2px] mr-[10px]"></span>
-            <NameAndColor name="Thị Trường" class="py-3" />
+            <!-- <NameAndColor name="Thị Trường" class="py-3" /> -->
+            <router-link to="/loading">hiii</router-link>
         </div>
         <div class="flex items-center w-[220px] h-10">
             <span class="bg-[#8BAFE5] w-3 h-3 border-[1px] rounded-[2px] mr-[10px]"></span>

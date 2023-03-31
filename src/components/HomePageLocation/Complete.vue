@@ -7,6 +7,9 @@
         </div>
 
         <CategoryVue title="Vì sao bất động sản quan trọng với nền kinh tế?" interact="1234 tương tác" />
+        <CategoryVue title="Vì sao bất động sản quan trọng với nền kinh tế?" interact="1234 tương tác" />
+        <CategoryVue title="Vì sao bất động sản quan trọng với nền kinh tế?" interact="1234 tương tác" />
+        <CategoryVue title="Vì sao bất động sản quan trọng với nền kinh tế?" interact="1234 tương tác" />
 
 
 
