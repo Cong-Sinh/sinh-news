@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white rounded-lg mb-5">
+  <div class="bg-white rounded-lg mb-5 shadow">
     <div class="p-4">
       <AvatarWithNameAndTime src="@/assets/img/avatar.png 2x" name="Ngô Thanh Thảo" time="15 phút trước"
         titleClass="text-sm" class="mb-3 " />

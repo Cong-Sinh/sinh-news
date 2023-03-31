@@ -1,7 +1,7 @@
 
 <template>
   <Header />
-  <div class="grid grid-cols-12 bg-Background1">
+  <div class="grid grid-cols-12 bg-Background1 font-font">
     <LeftSidebar />
     <main class="font-font col-span-5 col-start-4 mt-14">
       <div class="py-8">
@@ -16,12 +16,11 @@
 
         <ArticleCard />
         <!-- content-post -->
+
+        <Loading />
+
+        <Complete />
       </div>
-
-
-
-
-
 
     </main>
 
@@ -37,6 +36,8 @@ export default {
     RightSidebar,
     ArticleCard,
     ShortVideo,
+    Loading,
+    Complete,
   },
 };
 import Header from "@/layouts/Header.vue";
@@ -44,4 +45,6 @@ import LeftSidebar from "@/components/Sidebar/LeftSidebar.vue";
 import RightSidebar from "@/components/Sidebar/RightSidebar.vue";
 import ArticleCard from "@/components/ArticleCard/index.vue";
 import ShortVideo from "@/components/ShortVideo/ShortVideo.vue";
+import Loading from "@/components/HomePageLocation/Loading.vue";
+import Complete from '@/components/HomePageLocation/Complete.vue';
 </script>

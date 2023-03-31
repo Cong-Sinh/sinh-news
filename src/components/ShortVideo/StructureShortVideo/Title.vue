@@ -1,5 +1,5 @@
 <template>
-    <p class=" bottom-4 text-white font-medium px-3  z-20 absolute drop-shadow-lg">{{ title }}</p>
+    <p class=" bottom-[1rem] text-white font-medium px-3  z-20 absolute drop-shadow-lg">{{ title }}</p>
 </template>
 
 <script>

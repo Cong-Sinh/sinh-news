@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-around items-center h-[48px]">
+  <div class="flex justify-around items-center h-[48px] ">
     <vote vote="278" />
     <share share="Chia Sẻ" />
     <comment comment="bình luận" />
