@@ -5,30 +5,22 @@
     <LeftSidebar />
     <main class="font-font col-span-5 col-start-4 mt-14">
       <div class="py-8">
-        <!-- content-post -->
         <ArticleCard />
 
         <div class="pb-8">
-          <!-- shortVideo -->
           <ShortVideo />
-          <!-- shortVideo -->
         </div>
 
+        <Loading />
+
         <ArticleCard />
-        <!-- content-post -->
-
-
 
 
         <Complete />
       </div>
 
-
     </main>
     <RightSidebar />
-
-
-
   </div>
 </template>
 
@@ -51,4 +43,5 @@ import ArticleCard from "@/components/ArticleCard/index.vue";
 import ShortVideo from "@/components/ShortVideo/ShortVideo.vue";
 import Loading from "@/components/HomePageLocation/Loading.vue";
 import Complete from '@/components/HomePageLocation/Complete.vue';
+import LoadingPageVue from './LoadingPage.vue';
 </script>

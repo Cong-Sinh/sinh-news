@@ -16,10 +16,24 @@
 
     <!-- user  -->
     <div class="flex items-center ml-auto col-span-4">
-      <img srcset="../assets/img/User.png 2x" alt="Meey News" class="w-4 h-4" />
-      <button class="ml-[6px] text-Primary5 mr-[36px]">Đăng nhập</button>
+      <login title="Đăng nhập" />
+      <!-- <LogUot /> -->
     </div>
     <!-- user  -->
     <!-- top-header -->
   </header>
 </template>
+
+<script>
+
+import AvatarHeader from '@/components/Header/AvatarHeader.vue'
+import Login from '@/components/Header/AvatarLogin/Login.vue'
+import LogUot from '@/components/Header/AvatarLogin/LogUot.vue'
+export default {
+  components: {
+    AvatarHeader,
+    Login,
+    LogUot
+  }
+}
+</script>
