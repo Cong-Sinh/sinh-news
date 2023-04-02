@@ -5,19 +5,19 @@
 
         <LeftDetail />
 
-        <main class="font-font col-span-5 col-start-4 mt-14">
+        <main class="font-font col-span-5 col-start-4 mt-14 mb-7 ">
             <div class="flex items-center pt-6 pb-4">
                 <img srcset="@/assets/img/IconHomeDetail.png 2x" alt="" class="h-4 w[14px]">
                 <img srcset="@/assets/img/IconLefteDetail.png 2x" alt="" class="mx-3 w-1 h-[10px]">
                 <p>Thị Trường</p>
             </div>
 
-            <div class="bg-white pt-4 px-3">
+            <div class="bg-white pt-4 px-3 rounded-lg">
 
                 <AvatarWithNameAndTime name="Phạm Đăng Phúc" time="22 phút trước" class="ml-2" />
 
                 <TitleDetaiil title='Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng
-                        tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
+                                                                        tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
                 <!-- bài báo -->
                 <Article />
                 <!-- bài báo -->
@@ -49,6 +49,7 @@
 
                     <!-- comment -->
                     <CommentDetail />
+                    <RepComment />
                     <CommentDetail />
                     <CommentDetail />
                     <!-- comment -->
@@ -78,8 +79,10 @@ import LeftDetail from '@/pages/Detail/componentsDetail/LeftSideBar/LeftDetail.v
 import TitleDetaiil from '@/pages/Detail/componentsDetail/TitleDetail/TitleDetaiil.vue';
 import Article from './componentsDetail/ContentArticle/Article.vue';
 import Share from './componentsDetail/Share/Share.vue';
-import TrendNews from '@/pages/Detail/componentsDetail/TrendNews/TrendNews.vue'
-import CommentDetail from './componentsDetail/CommentDetail/CommentDetail.vue';
+import TrendNews from '@/pages/Detail/componentsDetail/TrendNews/TrendNews.vue';
+import CommentDetail from './componentsDetail/Comment/Comment.vue';
+import RepComment from './componentsDetail/Comment/RepComment.vue';
+
 export default {
     components: {
         Header,
@@ -91,7 +94,8 @@ export default {
         Article,
         Share,
         TrendNews,
-        CommentDetail
+        CommentDetail,
+        RepComment
     }
 }
 </script>

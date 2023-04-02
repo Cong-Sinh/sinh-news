@@ -15,6 +15,7 @@
 
         <ArticleCard />
 
+        <VideoCard />
 
         <Complete />
       </div>
@@ -34,6 +35,7 @@ export default {
     ShortVideo,
     Loading,
     Complete,
+    VideoCard,
   },
 };
 import Header from "@/layouts/Header.vue";
@@ -43,5 +45,6 @@ import ArticleCard from "@/components/ArticleCard/index.vue";
 import ShortVideo from "@/components/ShortVideo/ShortVideo.vue";
 import Loading from "@/components/HomePageLocation/Loading.vue";
 import Complete from '@/components/HomePageLocation/Complete.vue';
+import VideoCard from "@/components/ArticleCard/VideoCard.vue";
 import LoadingPageVue from './LoadingPage.vue';
 </script>
