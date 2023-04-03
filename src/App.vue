@@ -3,6 +3,8 @@
 
   <Detail />
 
+  <!-- <HomeShare /> -->
+
   <!-- <LoadingPage /> -->
 
   <router-view />
@@ -13,13 +15,16 @@
 import LoadingPage from './layouts/LoadingPage.vue';
 import Main from './layouts/Main.vue';
 import Detail from './pages/Detail/Detail.vue';
+import HomeShare from './pages/HomeShare/Share.vue';
+
 
 export default {
   name: 'App',
   components: {
     Main,
     LoadingPage,
-    Detail
+    Detail,
+    HomeShare
   }
 }
 </script>

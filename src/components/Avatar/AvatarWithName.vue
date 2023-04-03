@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center">
-    <img srcset="@/assets/img/avatar.png 2x" alt="Meey News" :class="['mr-1']" />
+    <img srcset="@/assets/img/avatar.png 2x" alt="Meey News" :class="['mr-1', height, width]" />
     <p :class="titleClass">{{ name }}</p>
   </div>
 </template>
@@ -14,12 +14,20 @@ export default {
     },
     name: {
       type: String,
-      default: "tadaaa",
+      default: "",
       required: true,
     },
     titleClass: {
       type: String,
       default: "",
+    },
+    width: {
+      type: String,
+      default: "w-6",
+    },
+    height: {
+      type: String,
+      default: "h-6",
     },
   },
 };
