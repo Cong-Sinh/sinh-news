@@ -18,7 +18,7 @@
 
                 <TitleDetaiil
                     title='Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng
-                                                                                                                                                                                                                                                                                                                                                                                                tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
+                                                                                                                                                                                                                                                                                                                                                                                                                tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
                 <!-- bài báo -->
                 <Article />
                 <!-- bài báo -->
@@ -43,10 +43,10 @@
                             <img srcset="@/assets/img/IconUserDown.png 2x" alt="" class="items-center">
                             <ul class=" rounded-lg  absolute mt-[8rem] ml-[-3rem] z-30 bg-white  shadow-2xl">
                                 <li class="ml-4 pr-12 my-5 text-Background4 text-text2 font-normal">
-                                    mới nhất
+                                    Mới nhất
                                 </li>
                                 <li class="ml-4 pr-12 my-5 text-Background4 text-text2 font-normal">
-                                    mới nhất
+                                    Cũ nhất
                                 </li>
                             </ul>
                         </ul>
@@ -90,9 +90,9 @@ import TitleDetaiil from '@/pages/Detail/componentsDetail/TitleDetail/TitleDetai
 import Article from './componentsDetail/ContentArticle/Article.vue';
 import Share from './componentsDetail/Share/Share.vue';
 import TrendNews from '@/pages/Detail/componentsDetail/TrendNews/TrendNews.vue';
-import CommentDetail from './componentsDetail/Comment/Comment.vue';
-import RepComment from './componentsDetail/Comment/RepComment.vue';
-import CommentErorr from './componentsDetail/Comment/CommentErorr.vue';
+import CommentDetail from '@/pages/Comment/Comment.vue';
+import RepComment from '@/pages/Comment/RepComment.vue';
+import CommentErorr from '@/pages/Comment/CommentErorr.vue';
 
 export default {
     components: {

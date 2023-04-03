@@ -1,9 +1,9 @@
 <template>
   <!-- <Main /> -->
 
-  <Detail />
+  <!-- <Detail /> -->
 
-  <!-- <HomeShare /> -->
+  <HomeShare />
 
   <!-- <LoadingPage /> -->
 

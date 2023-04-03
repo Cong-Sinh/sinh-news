@@ -14,13 +14,8 @@
                 <img src="@/assets/img/LeftShare.png" alt="" class="w-[78px] h-[78px]">
                 <div class="relative">
                     <img src="@/assets/img/ShareHome.png" alt="" class="h-[826px] w-[448px] ">
-                    <p class="absolute bottom-6 text-white px-4">Ông Dũng cho biết qua báo cáo của các địa phương, các hiệp
-                        hội
-                        cho thấy thị
-                        trường
-                        bất động sản cao
-                        cấp được đầu tư nhiều trong khi đó nhà ở xã hội, nhà có giá phù hợp rất hạn chế. Đây là biểu hiện
-                        lệch pha rõ nét </p>
+                    <ContentCommentShare class="absolute bottom-6 text-white px-4"
+                        comment="Ông Dũng cho biết qua báo cáo của các địa phương, các hiệp hội cho thấy thị trường bất động sản cao cấp được đầu tư nhiều trong khi đó nhà ở xã hội, nhà có giá phù hợp rất hạn chế. Đây là biểu hiện lệch pha rõ nét " />
                 </div>
                 <div class="">
 
@@ -66,17 +61,18 @@
 <script>
 import AvatarWithName from '@/components/Avatar/AvatarWithName.vue'
 import AvatarWithNameAndTime from "@/components/Avatar/AvatarWithNameAndTime.vue";
-import Comment from '@/pages/Detail/componentsDetail/Comment/Comment.vue';
+import Comment from '@/pages/Comment/Comment.vue';
 import CommentShare from './ComponentShare/structureCommentShare/CommentShares.vue';
 import RepCommentShare from './ComponentShare/structureCommentShare/RepCommentShare.vue';
-
+import ContentCommentShare from './ComponentShare/structureCommentShare/ContentCommentShare.vue';
 export default {
     components: {
         AvatarWithName,
         AvatarWithNameAndTime,
         Comment,
         CommentShare,
-        RepCommentShare
+        RepCommentShare,
+        ContentCommentShare
     },
 
 }
