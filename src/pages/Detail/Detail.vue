@@ -18,9 +18,10 @@
 
                 <TitleDetaiil
                     title='Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng
-                                                                                                                                                                                                                                                                                                                                                                                                                tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
+                                                                                                                                                                                                                                                                                                                                                                                                                                            tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
                 <!-- bài báo -->
                 <Article />
+
                 <!-- bài báo -->
 
                 <!-- bài viết hữu ích -->
@@ -107,7 +108,7 @@ export default {
         TrendNews,
         CommentDetail,
         RepComment,
-        CommentErorr
+        CommentErorr,
     }
 }
 </script>

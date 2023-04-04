@@ -15,11 +15,19 @@
     <!-- search  -->
 
     <!-- user  -->
-    <div class="flex items-center ml-auto col-span-4">
-      <login title="Đăng nhập" />
-      <!-- <LogUot /> -->
+    <div class="flex items-center ml-auto col-span-4 ">
+      <login title="Đăng nhập" class="group-hover:block" />
+
+      <!-- <div class="absolute group top-0 right-0 ">
+        <LogUot class="ml-[10rem] mb-1 mt-2" />
+        <div class="mr-3 px-3 rounded-lg  bg-white shadow ">
+          <StructureLoguot name="Nguyễn Tuấn Anh" setting="Quản lý thông tin cá nhân" loguot="Đăng xuât" />
+        </div>
+      </div> -->
+
     </div>
     <!-- user  -->
+
     <!-- top-header -->
   </header>
 </template>
@@ -29,11 +37,13 @@
 import AvatarHeader from '@/components/Header/AvatarHeader.vue'
 import Login from '@/components/Header/AvatarLogin/Login.vue'
 import LogUot from '@/components/Header/AvatarLogin/LogUot.vue'
+import StructureLoguot from '@/components/Header/AvatarLogin/StructureLoguot.vue'
 export default {
   components: {
     AvatarHeader,
     Login,
-    LogUot
+    LogUot,
+    StructureLoguot
   }
 }
 </script>

@@ -3,7 +3,9 @@
 
   <!-- <Detail /> -->
 
-  <HomeShare />
+  <!-- <HomeShare /> -->
+
+  <PopUp />
 
   <!-- <LoadingPage /> -->
 
@@ -16,6 +18,7 @@ import LoadingPage from './layouts/LoadingPage.vue';
 import Main from './layouts/Main.vue';
 import Detail from './pages/Detail/Detail.vue';
 import HomeShare from './pages/HomeShare/Share.vue';
+import PopUp from './pages/PopUp/PopUp.vue';
 
 
 export default {
@@ -24,7 +27,8 @@ export default {
     Main,
     LoadingPage,
     Detail,
-    HomeShare
+    HomeShare,
+    PopUp
   }
 }
 </script>
