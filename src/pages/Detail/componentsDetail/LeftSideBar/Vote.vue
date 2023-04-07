@@ -1,7 +1,7 @@
 <template>
-    <p class="text-text2 text-center" :vote="vote">{{ vote }}</p>
-    <p class="text-Primary5 text-text2 " :title="title" :share="share" :class="[colorClass]">{{ title }}</p>
-    <p class=" font-normal text-text2 text-center" :comment="comment">{{ comment }}</p>
+    <p class="text-M text-center" :vote="vote">{{ vote }}</p>
+    <p class="text-primary5 text-M " :title="title" :share="share" :class="[colorClass]">{{ title }}</p>
+    <p class=" font-normal text-M text-center" :comment="comment">{{ comment }}</p>
 </template>
 
 <script>

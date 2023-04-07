@@ -40,7 +40,7 @@
 
                 <VideoCard />
 
-                <Complete />
+                <RecentNews />
             </div>
 
         </main>
@@ -56,8 +56,8 @@ export default {
         RightSidebar,
         ArticleCard,
         ShortVideo,
-        Loading,
-        Complete,
+        NewsAround,
+        RecentNews,
         VideoCard,
 
 
@@ -76,8 +76,8 @@ import LeftSidebar from "@/components/Sidebar/LeftSidebar.vue";
 import RightSidebar from "@/components/Sidebar/RightSidebar.vue";
 import ArticleCard from "@/components/ArticleCard/index.vue";
 import ShortVideo from "@/components/ShortVideo/ShortVideo.vue";
-import Loading from "@/components/HomePageLocation/Loading.vue";
-import Complete from '@/components/HomePageLocation/Complete.vue';
+import NewsAround from "@/components/HomePageLocation/NewsAround.vue";
+import RecentNews from '@/components/HomePageLocation/RecentNews.vue';
 import VideoCard from "@/components/ArticleCard/VideoCard.vue";
 
 

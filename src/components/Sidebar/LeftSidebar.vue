@@ -5,10 +5,10 @@
       <h3>Trang chủ</h3>
       <img srcset="@/assets/img/IconRight.png" alt="Meey News" class="w-[5px] h-[9px] ml-4" />
     </div>
-    <h3 class="mt-8 mb-4 text-Grey6">Tất cả chuyên mục</h3>
+    <h3 class="mt-8 mb-4 text-grey6">Tất cả chuyên mục</h3>
     <List />
 
-    <div class="text-text3  text-Grey7">
+    <div class="text-SM  text-grey7">
       <p class="py-1">Về Meey Share</p>
       <p class="py-1">Trợ giúp</p>
       <p class="py-1">Điều khoản sử dụng</p>

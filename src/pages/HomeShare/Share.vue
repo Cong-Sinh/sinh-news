@@ -23,7 +23,7 @@
                     <div class="absolute">
                         <div class="">
                             <img src="@/assets/img/UpShare.png" alt="" class="pt-[2rem]">
-                            <p class="text-center text-white text-text2">1492</p>
+                            <p class="text-center text-white text-M">1492</p>
                         </div>
                         <img src="@/assets/img/DowShare.png" alt="" class="pb-3">
                         <img src="@/assets/img/CommentShare.png" alt="" class="pb-[1rem]">
@@ -34,7 +34,7 @@
         </div>
         <div class="gird col-span-3 px-4 pt-6 mb-2 ">
             <avatar-with-name name="Nguyễn Kỳ Duyên" height="w-9" width="h-9" />
-            <p class="pt-2 pb-4 text-Background4 font-normal text-text2 ">
+            <p class="pt-2 pb-4 text-background4 font-normal text-M ">
                 Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng tiêu
                 chuẩn chính sách "3 lằn ranh đỏ".
             </p>

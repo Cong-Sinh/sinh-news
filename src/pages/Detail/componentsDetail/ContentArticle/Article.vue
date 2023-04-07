@@ -1,21 +1,21 @@
 <template>
-    <div class="bg-Grey0 p-3 rounded-sm">
+    <div class="bg-grey0 p-3 rounded-sm">
         <div class="flex items-center">
             <img srcset="@/assets/img/IconDantri.png 2x" alt="">
             <p class="px-2">dantri.com.vn</p>
             <img src="@/assets/img/IconLefteDetail.png" alt="" class="w-1 h[6px]">
         </div>
 
-        <h2 class="font-semibold text-heading6 text-Background4 pt-1">
+        <h2 class="font-semibold text-heading6 text-background4 pt-1">
             80% bất động sản TPHCM là cao cấp: Đại diện Bộ xây dựng nói chưa chính xác
         </h2>
 
-        <p class="py-3 text-Grey7 font-normal italic text-text2">
+        <p class="py-3 text-grey7 font-normal italic text-M">
             Đại diện Bộ Xây dựng cho rằng con số này tổng hợp trong thời gian ngắn và trong giai đoạn thị trường
             bất động tương đối đặc biệt, nguồn cung ít nên phản ánh chưa chính xác.
         </p>
 
-        <div class="pt-3  text-text2 text-Grey8 font-normal ">
+        <div class="pt-3  text-M text-grey8 font-normal ">
             <p>
                 Thị trường bất động sản năm 2022 rơi vào tình trạng trầm lắng, đặc biệt là vào những tháng cuối
                 năm.
@@ -59,7 +59,7 @@
 
             <img srcset="@/assets/img/imgDantri.png 2x" alt="" class="h-full w-full">
 
-            <p class="text-text4 text-Grey7 py-2">
+            <p class="text-text4 text-grey7 py-2">
                 Ông Vương Duy Dũng, Phó Cục trưởng Cục Quản lý nhà và thị trường bất động sản, Bộ Xây dựng (Ảnh:
                 Đầu
                 tư)

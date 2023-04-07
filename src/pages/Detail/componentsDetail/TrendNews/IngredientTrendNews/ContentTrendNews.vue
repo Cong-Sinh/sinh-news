@@ -1,7 +1,7 @@
 <template>
-    <h3 class="font-semibold text-text1 text-Grey8 pb-2" :title="title">{{ title }}</h3>
+    <h3 class="font-semibold text-Base text-grey8 pb-2" :title="title">{{ title }}</h3>
 
-    <p class="text-text2 font-normal text-Grey6" :content="content"> {{ content }}</p>
+    <p class="text-text2 font-normal text-grey6" :content="content"> {{ content }}</p>
 </template>
 
 <script>

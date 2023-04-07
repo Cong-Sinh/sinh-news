@@ -1,6 +1,6 @@
 <template>
-    <div class="w-[16rem] relative inline-block  bg-no-repeat rounded-xl mr-4  ">
-        <img src="@/assets/img/Home1.png" alt="" class="">
+    <div class="w-[16rem] relative inline-block bg-no-repeat rounded-xl mr-4  ">
+        <img src="@/assets/img/Home1.png" alt="" class="w-full">
         <Title class="" :title="title" />
 
     </div>

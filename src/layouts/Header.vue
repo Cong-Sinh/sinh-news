@@ -8,9 +8,9 @@
     <!-- logo  -->
 
     <!-- search  -->
-    <div class="flex items-center  col-span-5  bg-Background1 h-10 rounded-[40px] my-2">
+    <div class="flex items-center  col-span-5  bg-background1 h-10 rounded-[40px] my-2">
       <img srcset="../assets/img/SearchBar.png 2x" alt="Meey News" class="w-4 h-4 ml-[15px] mr-[6px] my-3" />
-      <input type="text" placeholder="Tìm kiếm..." class="bg-Background1 outline-none w-[538px] h-[20px]" />
+      <input type="text" placeholder="Tìm kiếm..." class="bg-background1 outline-none w-[538px] h-[20px]" />
     </div>
     <!-- search  -->
 

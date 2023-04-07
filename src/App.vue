@@ -1,15 +1,18 @@
 <template>
-  <!-- <Main /> -->
+  <Main />
 
   <!-- <Detail /> -->
 
   <!-- <HomeShare /> -->
 
-  <PopUp />
+  <!-- <PopUp /> -->
 
   <!-- <LoadingPage /> -->
 
-  <router-view />
+  <!-- <router-view> -->
+
+
+  <!-- </router-view> -->
 </template>
 
 

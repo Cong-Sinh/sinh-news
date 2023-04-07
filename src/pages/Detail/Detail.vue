@@ -1,7 +1,7 @@
 <template>
     <Header />
 
-    <div class="grid grid-cols-12 bg-Background1 font-font">
+    <div class="grid grid-cols-12 bg-background1 font-font">
 
         <LeftDetail />
 
@@ -18,7 +18,7 @@
 
                 <TitleDetaiil
                     title='Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng
-                                                                                                                                                                                                                                                                                                                                                                                                                                            tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
                 <!-- bài báo -->
                 <Article />
 
@@ -38,15 +38,15 @@
                 <!-- comment post  -->
                 <div>
                     <div class="flex justify-between pt-[2rem] pb-[1rem]">
-                        <h3 class="font-semibold text-text1 text-Grey8">Bình luận (12)</h3>
+                        <h3 class="font-semibold text-text1 text-grey8">Bình luận (12)</h3>
                         <ul class="flex items-center">
-                            <p class="pr-2 relative text-Background4 text-text2 font-normal cursor-pointer">Mới nhất </p>
+                            <p class="pr-2 relative text-background4 text-text2 font-normal cursor-pointer">Mới nhất </p>
                             <img srcset="@/assets/img/IconUserDown.png 2x" alt="" class="items-center">
                             <ul class=" rounded-lg  absolute mt-[8rem] ml-[-3rem] z-30 bg-white  shadow-2xl">
-                                <li class="ml-4 pr-12 my-5 text-Background4 text-text2 font-normal">
+                                <li class="ml-4 pr-12 my-5 text-background4 text-text2 font-normal">
                                     Mới nhất
                                 </li>
-                                <li class="ml-4 pr-12 my-5 text-Background4 text-text2 font-normal">
+                                <li class="ml-4 pr-12 my-5 text-background4 text-text2 font-normal">
                                     Cũ nhất
                                 </li>
                             </ul>
@@ -67,7 +67,7 @@
 
                     <div class="flex justify-center pb-8">
                         <button
-                            class="text-text4 font-medium justify-center  flex items-center mx-4 w-[7rem] h-7 text-Grey7 border border-Grey1  rounded-[44px]">
+                            class="text-text4 font-medium justify-center  flex items-center mx-4 w-[7rem] h-7 text-grey7 border border-grey1  rounded-[44px]">
                             Xem Thêm
                             <img srcset="@/assets/img/IconUserDown.png 2x" alt="" class="pl-2">
                         </button>

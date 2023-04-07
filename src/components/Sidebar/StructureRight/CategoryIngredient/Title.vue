@@ -1,14 +1,12 @@
 <template>
     <div class>
-        <h3 class="w-[186px] mr-3 text-text2 text-Background4 content-navbar-right mb-1"> {{ title }}</h3>
-        <interact :text="text" />
+        <h3 class="w-[186px] mr-3 text-M text-background4 content-navbar-right mb-1"> {{ title }}</h3>
+        <p class="text-S text-grey3 font-normal">{{ text }}</p>
     </div>
 </template>
 
 <script>
-import interact from './interact.vue'
 export default {
-    components: { interact },
     props: {
         title: {
             type: String,

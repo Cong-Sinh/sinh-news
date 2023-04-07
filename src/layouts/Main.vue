@@ -1,7 +1,7 @@
 
 <template>
   <Header />
-  <div class="grid grid-cols-12 bg-Background1 font-font">
+  <div class="grid grid-cols-12 bg-background1 font-font">
     <LeftSidebar />
     <main class="font-font col-span-5 col-start-4 mt-14">
       <div class="py-8">
@@ -11,13 +11,13 @@
           <ShortVideo />
         </div>
 
-        <Loading />
+        <NewsAround />
 
         <ArticleCard />
 
         <VideoCard />
 
-        <Complete />
+        <RecentNews />
       </div>
 
     </main>
@@ -33,8 +33,8 @@ export default {
     RightSidebar,
     ArticleCard,
     ShortVideo,
-    Loading,
-    Complete,
+    NewsAround,
+    RecentNews,
     VideoCard,
   },
 };
@@ -43,8 +43,9 @@ import LeftSidebar from "@/components/Sidebar/LeftSidebar.vue";
 import RightSidebar from "@/components/Sidebar/RightSidebar.vue";
 import ArticleCard from "@/components/ArticleCard/index.vue";
 import ShortVideo from "@/components/ShortVideo/ShortVideo.vue";
-import Loading from "@/components/HomePageLocation/Loading.vue";
-import Complete from '@/components/HomePageLocation/Complete.vue';
+import NewsAround from "@/components/HomePageLocation/NewsAround.vue"
+import RecentNews from '@/components/HomePageLocation/RecentNews.vue';
 import VideoCard from "@/components/ArticleCard/VideoCard.vue";
 import LoadingPageVue from './LoadingPage.vue';
+import NewsAroundVue from '@/components/HomePageLocation/NewsAround.vue';
 </script>

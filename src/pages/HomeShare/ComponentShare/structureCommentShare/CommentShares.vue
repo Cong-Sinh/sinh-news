@@ -12,7 +12,7 @@
 
             <div class="flex items-center">
                 <voted vote="278" class=" w-7" />
-                <p class="text-text4 font-medium text-Grey6 ml-[5rem]">Phản hồi</p>
+                <p class="text-text4 font-medium text-grey6 ml-[5rem]">Phản hồi</p>
             </div>
         </div>
     </div>
