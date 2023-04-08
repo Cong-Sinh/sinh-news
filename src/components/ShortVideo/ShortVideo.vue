@@ -23,8 +23,6 @@
             </swiper-slide>
         </swiper>
 
-
-
     </div>
 </template>
 
@@ -52,16 +50,28 @@ export default {
 }
 
 
+
 </script>
+
 
 
 
 <style>
 .swiper-button-next {
-    width: 44px;
-    height: 44px;
+
+    width: 50px;
+    height: 50px;
     background-color: #F6F6F6;
     border-radius: 50px;
     color: #9A9A9A
+}
+
+.swiper-button-prev {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    color: #9A9A9A;
+    background-color: #F6F6F6;
+
 }
 </style>

@@ -17,6 +17,10 @@ export default {
       default: "",
       required: true,
     },
+    class: {
+      type: String,
+      default: "",
+    },
     titleClass: {
       type: String,
       default: "",

@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-around items-center h-[48px] ">
-    <vote vote="278" />
+    <vote vote="278 vote" />
     <comment comment="bình luận" />
     <share share="Chia Sẻ" />
   </div>

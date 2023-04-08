@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center cursor-pointer relative">
         <img srcset="@/assets/img/share.png 2x" alt="Meey News" class="w-4 h-[13px]" />
-        <h3 class="text-M text-grey7 ml-[10px]">{{ share }}</h3>
+        <h3 class="text-M text-primary5 ml-[10px]">{{ share }}</h3>
 
 
         <!-- <div class="absolute ml-[2rem] mb-[13rem] rounded-lg shadow-xl w-[14rem]  bg-white down">

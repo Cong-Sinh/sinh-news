@@ -1,6 +1,6 @@
 <template>
     <div class="font-font col-span-3 fixed mt-[12rem] ml-[18rem] ">
-        <div class="mb-7 ">
+        <div class="mb-2 ">
             <img src="@/assets/img/upleftSidebar.png" alt="" class="mb-1 ml-1">
             <vote vote="213.4" />
         </div>

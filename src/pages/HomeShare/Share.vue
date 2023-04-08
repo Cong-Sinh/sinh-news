@@ -1,7 +1,10 @@
 <template>
     <div class="grid grid-cols-12  font-font">
         <div class="gird col-span-9 bg-neutral-950">
+
             <img src="@/assets/img/BackgroudShare.png" alt="" class="opacity-[50%] blur-sm h-[1100px]   w-full">
+
+
             <div class="flex top-7 w-[73%] cursor-pointer pl-5 absolute ">
                 <div class="flex">
                     <img src="@/assets/img/IconClose.png" alt="" class="pr-6 cursor-pointer h-6 z-10">
@@ -13,8 +16,9 @@
             <div class="flex ml-[35%] translate-x-[-35%] justify-center items-center bottom-[6rem] absolute  ">
                 <img src="@/assets/img/LeftShare.png" alt="" class="w-[78px] h-[78px]">
                 <div class="relative">
-                    <img src="@/assets/img/ShareHome.png" alt="" class="h-[826px] w-[448px] ">
-                    <ContentCommentShare class="absolute bottom-6 text-white px-4"
+                    <div class="shadow-share z-1 w-[448px] h-[462px] top-[364px] rounded-lg absolute "> </div>
+                    <img src="@/assets/img/ShareHome.png" alt="" class="h-[826px] w-[448px]  ">
+                    <ContentCommentShare class="z-10  absolute bottom-6 text-white px-4"
                         comment="Ông Dũng cho biết qua báo cáo của các địa phương, các hiệp hội cho thấy thị trường bất động sản cao cấp được đầu tư nhiều trong khi đó nhà ở xã hội, nhà có giá phù hợp rất hạn chế. Đây là biểu hiện lệch pha rõ nét " />
                 </div>
                 <div class="">
@@ -34,16 +38,16 @@
         </div>
         <div class="gird col-span-3 px-4 pt-6 mb-2 ">
             <avatar-with-name name="Nguyễn Kỳ Duyên" height="w-9" width="h-9" />
-            <p class="pt-2 pb-4 text-background4 font-normal text-M ">
-                Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng tiêu
-                chuẩn chính sách "3 lằn ranh đỏ".
-            </p>
+            <TitleShare
+                title=' Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng tiêu
+                                                                                                                                        chuẩn chính sách "3 lằn ranh đỏ."' />
             <div class="border-t-2 ">
                 <div>
                     <rep-comment-share />
 
                     <CommentShare class="" />
                     <CommentShare class="" />
+
                     <div class=" border-t-2 ">
                         <div class="flex items-center mt-1">
                             <avatar-with-name height="w-10" width="h-10" class="pr-4" />
@@ -65,6 +69,7 @@ import Comment from '@/pages/Comment/Comment.vue';
 import CommentShare from './ComponentShare/structureCommentShare/CommentShares.vue';
 import RepCommentShare from './ComponentShare/structureCommentShare/RepCommentShare.vue';
 import ContentCommentShare from './ComponentShare/structureCommentShare/ContentCommentShare.vue';
+import TitleShare from './ComponentShare/TitleShare.vue';
 export default {
     components: {
         AvatarWithName,
@@ -72,7 +77,8 @@ export default {
         Comment,
         CommentShare,
         RepCommentShare,
-        ContentCommentShare
+        ContentCommentShare,
+        TitleShare
     },
 
 }

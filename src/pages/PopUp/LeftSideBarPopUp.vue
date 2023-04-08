@@ -1,6 +1,6 @@
 <template>
     <div class="font-font  fixed mt-[4rem] ml-[25rem] ">
-        <div class="mb-5 text-white ">
+        <div class="mb-5  ">
             <img src="@/assets/img/upleftSidebar.png" alt="" class="mb-1 ml-1 ">
             <vote vote="123.4" />
         </div>
@@ -9,7 +9,7 @@
         </div>
         <div class="mb-14 text-white">
             <img src="@/assets/img/CommentleftSidebar.png" alt="" class="mb-1 ml-1 ">
-            <Vote comment="298" colorClass="text-white" />
+            <Vote colorClass="text-white" comment="298" />
 
         </div>
         <div class="">

@@ -1,7 +1,8 @@
 <template>
     <div class="pb-5 pt-3">
         <div class="flex justify-between items-center">
-            <AvatarWithNameAndTime src="@/assets/img/CommentShare.png" name="Phạm Đăng Phúc" time="15 phút trước" />
+            <AvatarWithNameAndTime class="text-M" src="@/assets/img/CommentShare.png" name="Phạm Đăng Phúc"
+                time="15 phút trước" />
             <img srcset="@/assets/img/seeMore.png 2x" alt="">
         </div>
         <content-comment-detail />

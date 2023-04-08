@@ -12,7 +12,7 @@
                         <div class="bg-white pt-4 px-3 rounded-lg">
                             <AvatarWithNameAndTime name="Phạm Đăng Phúc" time="22 phút trước" class="ml-2" />
 
-                            <TitleDetaiil
+                            <TitleDetaiil class="text-M"
                                 title='Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
                             <!-- bài báo -->
                             <Article />

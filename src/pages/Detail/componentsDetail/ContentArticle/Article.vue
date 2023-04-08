@@ -2,7 +2,7 @@
     <div class="bg-grey0 p-3 rounded-sm">
         <div class="flex items-center">
             <img srcset="@/assets/img/IconDantri.png 2x" alt="">
-            <p class="px-2">dantri.com.vn</p>
+            <p class="px-2 text-M font-normal text-grey6">dantri.com.vn</p>
             <img src="@/assets/img/IconLefteDetail.png" alt="" class="w-1 h[6px]">
         </div>
 
@@ -59,7 +59,7 @@
 
             <img srcset="@/assets/img/imgDantri.png 2x" alt="" class="h-full w-full">
 
-            <p class="text-text4 text-grey7 py-2">
+            <p class="text-text4 text-grey7 py-3">
                 Ông Vương Duy Dũng, Phó Cục trưởng Cục Quản lý nhà và thị trường bất động sản, Bộ Xây dựng (Ảnh:
                 Đầu
                 tư)

@@ -9,16 +9,16 @@
             <div class="flex items-center pt-6 pb-4">
                 <img srcset="@/assets/img/IconHomeDetail.png 2x" alt="" class="h-4 w[14px]">
                 <img srcset="@/assets/img/IconLefteDetail.png 2x" alt="" class="mx-3 w-1 h-[10px]">
-                <p>Thị Trường</p>
+                <p class="uppercase text-grey4 text-M font-normal">Thị Trường</p>
             </div>
 
             <div class="bg-white pt-4 px-3 rounded-lg">
 
-                <AvatarWithNameAndTime name="Phạm Đăng Phúc" time="22 phút trước" class="ml-2" />
+                <AvatarWithNameAndTime name="Phạm Đăng Phúc" time="22 phút trước" class="ml-2 text-M" />
 
                 <TitleDetaiil
                     title='Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
                 <!-- bài báo -->
                 <Article />
 
@@ -30,6 +30,10 @@
 
                 <!-- tin xu huong -->
                 <div class="px-7 border-y-2">
+                    <div class="flex items-center  py-[20px]">
+                        <img srcset="@/assets/img/go_up.png 2x" alt="" class="w-[20px] h-3 mr-3">
+                        <h2 class="text-heading6 font-semibold text-grey8">Tin xu hướng</h2>
+                    </div>
                     <TrendNews />
                     <TrendNews />
                 </div>
@@ -65,7 +69,7 @@
                     <CommentDetail />
                     <!-- comment -->
 
-                    <div class="flex justify-center pb-8">
+                    <div class="flex justify-center py-8">
                         <button
                             class="text-text4 font-medium justify-center  flex items-center mx-4 w-[7rem] h-7 text-grey7 border border-grey1  rounded-[44px]">
                             Xem Thêm
@@ -77,7 +81,7 @@
 
             </div>
         </main>
-        <RightSidebar class=" mt-[4.5rem]" />
+        <RightSidebar class=" mt-[4.5rem] font-semibold" />
     </div>
 </template>
 

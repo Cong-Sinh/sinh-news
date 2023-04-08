@@ -1,6 +1,6 @@
 <template>
     <div class>
-        <h3 class="w-[186px] mr-3 text-M text-background4 content-navbar-right mb-1"> {{ title }}</h3>
+        <h3 class="w-[186px] mr-3 text-M text-background4 font-medium content-navbar-right mb-1"> {{ title }}</h3>
         <p class="text-S text-grey3 font-normal">{{ text }}</p>
     </div>
 </template>
