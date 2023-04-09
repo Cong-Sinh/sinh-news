@@ -18,7 +18,7 @@
 
                 <TitleDetaiil
                     title='Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    tiêu chuẩn chính sách "3 lằn ranh đỏ" ' />
                 <!-- bài báo -->
                 <Article />
 
@@ -57,7 +57,8 @@
                         </ul>
                     </div>
 
-                    <input type="text" placeholder="Bình luận của bạn..." class="h-11 w-full border p-7 rounded-lg my-4">
+                    <input type="text" placeholder="Bình luận của bạn..."
+                        class="h-11 w-full border p-7 outline-none rounded-lg my-4">
 
                     <!-- comment post  -->
 

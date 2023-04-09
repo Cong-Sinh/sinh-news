@@ -40,7 +40,7 @@
             <avatar-with-name name="Nguyễn Kỳ Duyên" height="w-9" width="h-9" />
             <TitleShare
                 title=' Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng tiêu
-                                                                                                                                        chuẩn chính sách "3 lằn ranh đỏ."' />
+                                                                                                                                                        chuẩn chính sách "3 lằn ranh đỏ."' />
             <div class="border-t-2 ">
                 <div>
                     <rep-comment-share />

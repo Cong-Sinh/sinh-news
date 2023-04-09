@@ -1,11 +1,11 @@
 <template>
-  <Main />
+  <!-- <Main /> -->
 
   <!-- <Detail /> -->
 
   <!-- <HomeShare /> -->
 
-  <!-- <PopUp /> -->
+  <PopUp />
 
   <!-- <LoadingPage /> -->
 
