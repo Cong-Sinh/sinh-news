@@ -1,5 +1,4 @@
 import qs from 'qs'
-import { assert } from '@/core'
 
 import { Http } from './http.init'
 import { ResponseWrapper, ErrorWrapper } from './util'
@@ -39,7 +38,6 @@ export class BaseService {
    */
 
   static async getListPublic (parameters = {}) {
-    assert.object(parameters)
 
     const params = { ...parameters }
 
@@ -58,7 +56,6 @@ export class BaseService {
   }
 
   static async getByIdPublic (id) {
-    assert.id(id, { required: true })
 
     try {
       const response = await this.request().get(`${this.entity}/${id}`)
@@ -76,7 +73,6 @@ export class BaseService {
    */
 
   static async getById (id) {
-    assert.id(id, { required: true })
 
     try {
       const response = await this.request({ auth: true }).get(`${this.entity}/${id}`)
@@ -88,7 +84,6 @@ export class BaseService {
   }
 
   static async create (data = {}) {
-    assert.object(data, { required: true })
 
     try {
       const response = await this.request({ auth: true }).post(`${this.entity}`, data)
@@ -99,8 +94,6 @@ export class BaseService {
   }
 
   static async update (id, data = {}) {
-    assert.id(id, { required: true })
-    assert.object(data, { required: true })
 
     try {
       const response = await this.request({ auth: true }).patch(`${this.entity}/${id}`, data)
@@ -111,7 +104,6 @@ export class BaseService {
   }
 
   static async remove (id) {
-    assert.id(id, { required: true })
 
     try {
       const response = await this.request({ auth: true }).delete(`${this.entity}/${id}`)

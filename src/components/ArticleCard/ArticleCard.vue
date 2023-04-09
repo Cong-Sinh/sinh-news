@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white rounded-lg mb-5 shadow">
-    <div class="px-4 pt-4">
+    <div class="px-4 pt-4 pb-2">
       <AvatarWithNameAndTime
         src="@/assets/img/avatar.png 2x"
         name="Ngô Thanh Thảo"
@@ -8,28 +8,14 @@
         titleClass="text-sm"
         class="mb-3"
       />
-      <p class="text-background4 text-M font-normal leading-5 pb-2">
-        Trong bối cảnh nền kinh tế nghẽn
-        thanh
-        khoản, thị
-        trường bất động sản gặp khó khăn, tôi bắt
-        đầu nghe thấy
-        các nhận định “doanh nghiệp bất động sản phải giảm giá”; “doanh nghiệp bất động sản không chịu nghe lời,
-        không chịu giảm...
-        <strong
-          class="text-M text-grey5 font-normal cursor-pointer"
-        >xem thêm</strong>
-      </p>
+      <div class="text-background4 text-M font-normal leading-5 line-clamp-1">{{ article.summary }}</div>
     </div>
 
     <router-link to="/news/1">
-      <img src="@/assets/img/ImageRatio.png" alt="Meey News" />
+      <img :src="article.thumbnail?.url" alt="Meey News" />
     </router-link>
 
-    <h3 class="bg-background1 px-4 h-[64px] flex items-center boxshadow-content">
-      Dòng tiền bất động sản cuối năm 2022
-      chuyển hướng ra sao, thời điểm nào để bắt đáy?
-    </h3>
+    <h3 class="bg-background1 px-4 h-[64px] flex items-center boxshadow-content">{{ article.title }}</h3>
     <NameAndColor
       name="Thị Trường"
       color="bg-secondary3"
@@ -47,6 +33,16 @@ import CardAction from "@/components/ArticleCard/CardAction.vue";
 import NameAndColor from "../Category/NameAndColor.vue";
 
 export default {
+  props: {
+    article: {
+      type: Object,
+      default: {},
+      require: true,
+    },
+  },
+  mounted() {
+    console.log(this.article.thumbnail, "mounted -----   article");
+  },
   components: {
     AvatarWithName,
     AvatarWithNameAndTime,

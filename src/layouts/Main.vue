@@ -1,6 +1,5 @@
 
 <template>
-  <Header />
   <div class="grid grid-cols-12 bg-background1 font-font">
     <LeftSidebar />
     <main class="font-font col-span-5 col-start-4 mt-14">

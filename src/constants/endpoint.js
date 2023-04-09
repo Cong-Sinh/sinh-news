@@ -1,0 +1,1 @@
+export const getFeed = '/v1/feeds/suggestion'

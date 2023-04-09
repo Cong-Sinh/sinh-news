@@ -5,15 +5,14 @@
  */
 
 import axios from 'axios'
-
-import { AuthService } from '@/services/auth.service'
-import { API_URL } from '../.env'
+import { API_BASE_URL } from "@/constants/environment";
+// import { AuthService } from '@/services/auth.service'
 
 export class Http {
   constructor (status) {
     this.isAuth = status && status.auth ? status.auth : false
     this.instance = axios.create({
-      baseURL: API_URL
+      baseURL: API_BASE_URL
     })
 
     return this.init()

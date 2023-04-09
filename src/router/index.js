@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "@/layouts/Main.vue";
+import HomeScreen from "@/pages/HomeScreen/HomeScreen.vue";
 import NewsDetails from "@/pages/Detail/Detail.vue";
 // const NewsDetails = () => import("@/pages/NewsDetails.vue");
 
@@ -7,7 +7,7 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: HomeScreen,
   },
   {
     path: "/news/:id",

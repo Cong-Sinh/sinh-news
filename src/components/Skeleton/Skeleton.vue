@@ -1,19 +1,42 @@
 <template>
   <div class="col-span-5 col-start-4 mt-14 pt-6">
-    <div class="bg-white rounded-lg mb-5 shadow">
-      <div class="p-4 flex items-center">
-        <img src="@/assets/img/AvatarLoading.png" class="pr-1" />
-        <span class="w-[11rem] h-3 bg-background1"></span>
+    <div class="card">
+      <div class="card__image">
+        <Skeletor height="200" />
       </div>
-      <div class="p-4">
-        <div class="mb- h-[10px] bg-background1"></div>
-        <div class="mb- h-[10px] bg-background1 mt-2"></div>
+
+      <div class="card__slim">
+        <div class="card__avatar">
+          <Skeletor circle size="48" class="post__avatar" />
+        </div>
+
+        <div class="card__meta">
+          <h2>
+            <Skeletor width="50%" />
+          </h2>
+
+          <p>
+            <Skeletor width="75%" />
+          </p>
+        </div>
       </div>
-      <div class="bg-background1 h-[18rem]"></div>
-      <div class="ml-[18px] border-b-[1px] flex items-center">
-        <span class="bg-background1 w-[7rem] h-3 rounded-[2px] mr-[10px]"></span>
-        <NameAndColor name="Thị Trường" class="py-3" />
+
+      <div class="card__text">
+        <Skeletor v-for="i in 5" :key="i" />
+      </div>
+
+      <div class="card__actions">
+        <Skeletor width="96" height="36" pill style="margin-right: 4px" />
+        <Skeletor width="96" height="36" pill />
       </div>
     </div>
   </div>
 </template>
+<script>
+import "vue-skeletor/dist/vue-skeletor.css";
+import { Skeletor } from "vue-skeletor";
+
+export default {
+  components: { Skeletor },
+};
+</script>
