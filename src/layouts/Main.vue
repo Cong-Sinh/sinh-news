@@ -7,6 +7,8 @@
       <div class="py-8">
         <ArticleCard />
 
+        <Skeleton />
+
         <div class="pb-8">
           <ShortVideo />
         </div>
@@ -19,7 +21,6 @@
 
         <RecentNews />
       </div>
-
     </main>
     <RightSidebar />
   </div>
@@ -36,16 +37,18 @@ export default {
     NewsAround,
     RecentNews,
     VideoCard,
+    Skeleton,
   },
 };
 import Header from "@/layouts/Header.vue";
 import LeftSidebar from "@/components/Sidebar/LeftSidebar.vue";
 import RightSidebar from "@/components/Sidebar/RightSidebar.vue";
-import ArticleCard from "@/components/ArticleCard/index.vue";
+import ArticleCard from "@/components/ArticleCard/ArticleCard.vue";
 import ShortVideo from "@/components/ShortVideo/ShortVideo.vue";
-import NewsAround from "@/components/HomePageLocation/NewsAround.vue"
-import RecentNews from '@/components/HomePageLocation/RecentNews.vue';
+import NewsAround from "@/components/HomePageLocation/NewsAround.vue";
+import RecentNews from "@/components/HomePageLocation/RecentNews.vue";
 import VideoCard from "@/components/ArticleCard/VideoCard.vue";
-import LoadingPageVue from './LoadingPage.vue';
-import NewsAroundVue from '@/components/HomePageLocation/NewsAround.vue';
+import LoadingPageVue from "./LoadingPage.vue";
+import NewsAroundVue from "@/components/HomePageLocation/NewsAround.vue";
+import Skeleton from "@/components/Skeleton/Skeleton.vue";
 </script>

@@ -4,11 +4,11 @@ import NewsDetails from "@/pages/Detail/Detail.vue";
 // const NewsDetails = () => import("@/pages/NewsDetails.vue");
 
 const routes = [
-  // {
-  //   path: "/",
-  //   name: "home",
-  //   component: HomeView,
-  // },
+  {
+    path: "/",
+    name: "home",
+    component: HomeView,
+  },
   {
     path: "/news/:id",
     name: "newsDetail",
@@ -20,7 +20,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory,
+  history: createWebHistory(),
   routes,
 });
 
