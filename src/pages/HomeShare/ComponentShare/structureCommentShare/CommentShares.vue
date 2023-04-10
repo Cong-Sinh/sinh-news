@@ -1,5 +1,5 @@
 <template>
-    <div class="pb-5 pt-3">
+    <div class="pb-5  pt-3">
         <div class="flex justify-between items-center">
             <AvatarWithNameAndTime src="@/assets/img/CommentShare.png" name="Phạm Đăng Phúc" time="15 phút trước"
                 class="text-M" />

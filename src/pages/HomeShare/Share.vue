@@ -1,19 +1,20 @@
 <template>
     <div class="grid grid-cols-12  font-font">
-        <div class="gird col-span-9 bg-neutral-950">
+        <div class="gird col-span-9 mt-[36px] bg-neutral-950">
 
-            <img src="@/assets/img/BackgroudShare.png" alt="" class="opacity-[50%] blur-sm h-[1100px]   w-full">
+            <img src="@/assets/img/BackgroudShare.png" alt="" class="opacity-[50%] blur-sm h-full w-full">
 
-
-            <div class="flex top-7 w-[73%] cursor-pointer pl-5 absolute ">
-                <div class="flex">
-                    <img src="@/assets/img/IconClose.png" alt="" class="pr-6 cursor-pointer h-6 z-10">
-                    <img src="@/assets/img/Logo_Meey_News.png" alt="" class="h-[1.8rem] w-[7rem]">
-                </div>
+            <div class="flex top-20 w-[73%] cursor-pointer pl-5 absolute ">
+                <router-link to="/">
+                    <div class="flex">
+                        <img src="@/assets/img/IconClose.png" alt="" class="pr-6 cursor-pointer h-6 z-10">
+                        <img src="@/assets/img/Logo_Meey_News.png" alt="" class="h-[1.8rem] w-[7rem]">
+                    </div>
+                </router-link>
                 <img src="@/assets/img/extend.png" alt="" class=" top-0 right-0 w-5 h-5 ml-auto ">
 
             </div>
-            <div class="flex ml-[35%] translate-x-[-35%] justify-center items-center bottom-[6rem] absolute  ">
+            <div class="flex ml-[35%] translate-x-[-35%] justify-center items-center bottom-[3rem] absolute  ">
                 <img src="@/assets/img/LeftShare.png" alt="" class="w-[78px] h-[78px]">
                 <div class="relative">
                     <div class="shadow-share z-1 w-[448px] h-[462px] top-[364px] rounded-lg absolute "> </div>
@@ -36,11 +37,11 @@
                 </div>
             </div>
         </div>
-        <div class="gird col-span-3 px-4 pt-6 mb-2 ">
+        <div class="gird mt-14 col-span-3 px-4 pt-6 mb-2 ">
             <avatar-with-name name="Nguyễn Kỳ Duyên" height="w-9" width="h-9" />
             <TitleShare
                 title=' Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng tiêu
-                                                                                                                                                        chuẩn chính sách "3 lằn ranh đỏ."' />
+                                                                                                                                                                                                                                            chuẩn chính sách "3 lằn ranh đỏ."' />
             <div class="border-t-2 ">
                 <div>
                     <rep-comment-share />
