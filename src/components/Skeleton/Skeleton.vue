@@ -1,34 +1,28 @@
 <template>
-  <div class="col-span-5 col-start-4 mt-14 pt-6">
-    <div class="card">
-      <div class="card__image">
-        <Skeletor height="200" />
-      </div>
+  <div class="col-span-5 col-start-4 pt-6 ">
+    <div class="card rounded">
+      <div class="bg-white card__slim py-4">
+        <div class="flex items-center pl-4 card__avatar pb-4 bt-1 ">
+          <Skeletor circle size="24" class="post__avatar mr-1" />
+          <Skeletor width="186" height="12" pill style="margin-right: 4px" />
 
-      <div class="card__slim">
-        <div class="card__avatar">
-          <Skeletor circle size="48" class="post__avatar" />
         </div>
 
-        <div class="card__meta">
-          <h2>
-            <Skeletor width="50%" />
-          </h2>
+        <div class="card__meta px-4 ">
+          <Skeletor width="full" />
+          <Skeletor width="full" />
+        </div>
 
-          <p>
-            <Skeletor width="75%" />
-          </p>
+        <div class="card__image py-4">
+          <Skeletor height="400" />
+        </div>
+
+        <div class="pl-4 card__meta">
+          <Skeletor width="112" height="12" />
         </div>
       </div>
 
-      <div class="card__text">
-        <Skeletor v-for="i in 5" :key="i" />
-      </div>
 
-      <div class="card__actions">
-        <Skeletor width="96" height="36" pill style="margin-right: 4px" />
-        <Skeletor width="96" height="36" pill />
-      </div>
     </div>
   </div>
 </template>
