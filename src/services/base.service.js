@@ -42,7 +42,7 @@ export class BaseService {
     const params = { ...parameters }
 
     try {
-      const response = await this.request().get(`${this.entity}`, { params })
+      const response = await new Http().get(`${this.entity}`, { params })
       const data = {
         content: response.data.data,
         total: Number(response.headers['x-total-count'])

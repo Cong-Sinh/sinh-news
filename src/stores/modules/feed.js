@@ -8,7 +8,9 @@ export default {
       page: 0,
       results: []
     },
+    feedDetail: null,
     loadingArticleListData: true,
+    loadingDetail: true,
   },
 
   actions: {
@@ -23,7 +25,18 @@ export default {
         console.log('finallyyyy')
         commit('SET_LOADING_ARTICLE_LIST_DATA', false)
       }
+    },
 
+    async getFeedDetail({commit}, feedId)  {
+      try {
+        commit('SET_LOADING_DETAIL', true)
+        const response = await ArticleService.getFeedDetail(feedId)
+        commit('SET_FEED_DETAIL', response.data)
+      } catch (err) {
+        console.log('errr', err)
+      } finally {
+        commit('SET_LOADING_DETAIL', false)
+      }
     }
   },
 
@@ -34,15 +47,32 @@ export default {
 
     SET_LOADING_ARTICLE_LIST_DATA(state, isLoading) {
       state.loadingArticleListData = isLoading
-    }
+    },
+
+    SET_LOADING_DETAIL(state, isLoading) {
+      state.loadingDetail = isLoading
+    },
+
+    SET_FEED_DETAIL(state, data) {
+      state.feedDetail = data
+    },
   },
 
   getters: {
     articleList: state => {
       return state.articleListData.results
     },
+
     isLoading: state => {
       return state.loadingArticleListData
+    },
+
+    articleDetail: state => {
+      return state.feedDetail
+    },
+
+    isLoadingDetail: state => {
+      return state.loadingDetail
     }
   }
 }
