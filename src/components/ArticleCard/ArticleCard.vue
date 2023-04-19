@@ -11,11 +11,13 @@
       <div class="text-background4 text-M font-normal leading-5 line-clamp-1">{{ article.summary }}</div>
     </div>
 
-    <router-link to="/news/1">
+    <router-link :to="`/feed/${article.code}`">
       <img :src="article.thumbnail?.url" alt="Meey News" />
+      <h3
+        class="bg-background1 px-4 h-[64px] flex items-center boxshadow-content"
+      >{{ article.title }}</h3>
     </router-link>
 
-    <h3 class="bg-background1 px-4 h-[64px] flex items-center boxshadow-content">{{ article.title }}</h3>
     <NameAndColor
       name="Thị Trường"
       color="bg-secondary3"
@@ -25,12 +27,12 @@
   </div>
 </template>
 <script>
-import { RouterLink } from "vue-router";
+import { RouterLink } from 'vue-router';
 
-import AvatarWithName from "@/components/Avatar/AvatarWithName.vue";
-import AvatarWithNameAndTime from "@/components/Avatar/AvatarWithNameAndTime.vue";
-import CardAction from "@/components/ArticleCard/CardAction.vue";
-import NameAndColor from "../Category/NameAndColor.vue";
+import AvatarWithName from '@/components/Avatar/AvatarWithName.vue';
+import AvatarWithNameAndTime from '@/components/Avatar/AvatarWithNameAndTime.vue';
+import CardAction from '@/components/ArticleCard/CardAction.vue';
+import NameAndColor from '../Category/NameAndColor.vue';
 
 export default {
   props: {
@@ -40,9 +42,7 @@ export default {
       require: true,
     },
   },
-  mounted() {
-    console.log(this.article.thumbnail, "mounted -----   article");
-  },
+
   components: {
     AvatarWithName,
     AvatarWithNameAndTime,
