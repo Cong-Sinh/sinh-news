@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed right-[10rem]  top-14 mt-6">
+  <div class="fixed  right-[10rem]  top-14 mt-6">
     <!-- Title  -->
     <TitleSidebar title="Xu hướng" src="@/assets/img/AvatarLoading.png" />
     <!-- Title  -->
