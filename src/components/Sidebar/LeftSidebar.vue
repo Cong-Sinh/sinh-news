@@ -6,7 +6,11 @@
       <img srcset="@/assets/img/IconRight.png" alt="Meey News" class="w-[5px] h-[9px] ml-4" />
     </div>
     <h3 class="mt-8 mb-4 text-grey6">Tất cả chuyên mục</h3>
-    <List />
+    <List :items="leftSide"></List>
+    <!-- <div v-for="(item, index) in leftSide" :key="index">
+      {{ item.name }}
+    </div>
+    <h1>tada</h1> -->
 
     <div class="text-SM  text-grey7">
       <p class="py-1">Về Meey Share</p>
@@ -19,8 +23,26 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 import List from './StructureLeft/List.vue';
 export default {
+  created() {
+    this.getLefSideBar()
+  },
+  mounted() {
+    // console.log(
+    //   this.getLefSideBar, '------------------------------ getLefSideBar'
+    // );
+  },
+  computed: {
+    ...mapGetters('feed', {
+      leftSide: 'leftSide',
+    }),
+  },
+  methods: {
+    ...mapActions('feed', ['getLefSideBar']),
+  },
   components: {
     List
   }

@@ -10,18 +10,13 @@
           <main class="font-font col-span-5 col-start-5 mt-14 mb-7">
             <div class="bg-white pt-4 px-3 rounded-lg">
               <AvatarWithNameAndTime name="Phạm Đăng Phúc" time="22 phút trước" class="ml-2" />
-              <TitleDetaiil
-                class="text-M"
-                title="Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng tiêu chuẩn chính sách \'3 lằn ranh đỏ\"
-              />
+              <Summary class="text-M"
+                title="Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng tiêu chuẩn chính sách \'3 lằn ranh đỏ\" />
               <!-- bài báo -->
               <Article />
               <!-- bài báo -->
-              <img
-                src="@/assets/img/CloseIcon.png"
-                alt
-                class="absolute top-0 mt-[4rem] right-0 mr-[18rem] cursor-pointer"
-              />
+              <img src="@/assets/img/CloseIcon.png" alt
+                class="absolute top-0 mt-[4rem] right-0 mr-[18rem] cursor-pointer" />
             </div>
           </main>
         </div>
@@ -66,7 +61,7 @@ export default {
     RightSidebar,
     AvatarWithNameAndTime,
     Voted,
-    TitleDetaiil,
+    Summary,
     Article,
     LeftSideBarPopUpVue,
     LeftDetail,
@@ -83,7 +78,7 @@ import VideoCard from "@/components/ArticleCard/VideoCard.vue";
 
 import AvatarWithNameAndTime from "@/components/Avatar/AvatarWithNameAndTime.vue";
 import Voted from "@/components/ArticleCard/CardIngredient/Voted.vue";
-import TitleDetaiil from "@/pages/Detail/componentsDetail/TitleDetail/TitleDetaiil.vue";
+import Summary from "@/pages/Detail/componentsDetail/Summary/Summary.vue";
 import Article from "../Detail/componentsDetail/ContentArticle/Article.vue";
 import LeftSideBarPopUpVue from "./LeftSideBarPopUp.vue";
 import LeftDetail from "../Detail/componentsDetail/LeftSideBar/LeftDetail.vue";

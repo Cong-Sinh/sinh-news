@@ -1,6 +1,6 @@
 <template>
     <div class="grid grid-cols-12  font-font">
-        <div class="gird col-span-9 mt-[36px] bg-neutral-950">
+        <div class="gird col-span-9 mt-[36px] bg-neutral-950 h-full">
 
             <img src="@/assets/img/BackgroudShare.png" alt="" class="opacity-[50%] blur-sm h-full w-full">
 
@@ -41,7 +41,7 @@
             <avatar-with-name name="Nguyễn Kỳ Duyên" height="w-9" width="h-9" />
             <TitleShare
                 title=' Bloomberg tiết lộ Trung Quốc đang cân nhắc nới lỏng kiểm soát với các doanh nghiệp tùy vào việc đáp ứng tiêu
-                                                                                                                                                                                                                                            chuẩn chính sách "3 lằn ranh đỏ."' />
+                                                                                                                                                                                                                                                                chuẩn chính sách "3 lằn ranh đỏ."' />
             <div class="border-t-2 ">
                 <div>
                     <rep-comment-share />

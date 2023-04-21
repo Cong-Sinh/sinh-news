@@ -1,10 +1,10 @@
 <template>
-    <div class="text-grey8 font-normal  ">
-        <div class="flex items-center font-semibold  w-[220px] mr-[10px] h-10">
-            <NameAndColor name="Thị Trường" class="py-3 font-bold    " color="bg-[#FD867E]" />
-            <img src="@/assets/img/IconRight.png" alt="" class=" h-2.5 w-1.5 ml-3">
+    <div class="text-grey8 font-normal mb-[15rem]  ">
+        <div v-for="(item, index) in items" :key="index" class="flex items-center font-semibold  w-[220px] mr-[10px] h-10">
+            <NameAndColor :name="item.name" class="py-3 font-normal " :color="`bg-[${item.css.borderColor}]`" />
         </div>
-        <div class="flex items-center w-[220px]  h-10">
+
+        <!-- <div class="flex items-center w-[220px]  h-10">
             <NameAndColor name="Dự án" class="py-3 font-normal " color="bg-[#8BAFE5]" />
 
         </div>
@@ -34,14 +34,21 @@
         </div>
         <div class="flex items-center w-[220px] h-10 mb-[238px]">
             <NameAndColor name="Giải trí" class="py-3 font-normal " color="bg-[#DE782D]" />
+        </div> -->
 
-        </div>
     </div>
 </template>
 
 <script>
 import NameAndColor from "@/components/Category/NameAndColor.vue"
 export default {
+    props: {
+        items: {
+            type: Array,
+            default: [],
+        }
+    },
+
     components: { NameAndColor },
 }
 </script>
