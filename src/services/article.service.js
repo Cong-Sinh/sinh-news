@@ -56,4 +56,15 @@ export class ArticleService extends BaseService {
       throw new ErrorWrapper(error, message);
     }
   }
+
+  static async getFeedDetail(feedId) {
+    const endpoint = `${API_BASE_URL + getFeedById + feedId}`;
+    try {
+      const response = await this.request().get(endpoint);
+      return new ResponseWrapper(response, response.data);
+    } catch (error) {
+      const message = error.response.data ? error.response.data.error : error.response.statusText;
+      throw new ErrorWrapper(error, message);
+    }
+  }
 }

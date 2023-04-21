@@ -10,7 +10,7 @@ import { API_BASE_URL } from "@/constants/environment";
 
 export class Http {
   constructor (status) {
-    this.isAuth = status && status.auth ? status.auth : false
+    // this.isAuth = status && status.auth ? status.auth : false
     this.instance = axios.create({
       baseURL: API_BASE_URL
     })
