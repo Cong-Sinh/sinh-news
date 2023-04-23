@@ -41,6 +41,7 @@ export default {
     Header,
     LeftSidebar,
     RightSidebar,
+
     ArticleCard,
     ShortVideo,
     NewsAround,
@@ -49,11 +50,12 @@ export default {
     Skeleton,
   },
   created() {
-    const queryUrl = ''
-    if (queryUrl) {
-      this.getFeedByCategory({ limit: 10, page: 1, categorySlug: queryUrl })
+    console.log(this.categorySlug, 'this.categorySlug');
+    if (this.categorySlug) {
+      this.getFeedByCategory({ limit: 10, page: 1, categorySlug: this.categorySlug });
+    } else {
+      this.getFeedSuggestion();
     }
-    this.getFeedSuggestion();
   },
   mounted() {
     // console.log(
@@ -61,14 +63,33 @@ export default {
     //   "----------------------------------------------------------------this.articleList "
     // );
   },
+  watch: {
+    categorySlug: function (currentValue) {
+      if (currentValue) {
+        this.getFeedByCategory({ limit: 10, page: 1, categorySlug: currentValue });
+      } else {
+        this.getFeedSuggestion();
+      }
+    },
+  },
+
+  data() {
+    return {
+      tadaaaaa111: 1,
+    };
+  },
+
   computed: {
     ...mapGetters('feed', {
       articleList: 'articleList',
       isLoading: 'isLoading',
     }),
+    categorySlug() {
+      return this.$route?.query?.category;
+    },
   },
   methods: {
-    ...mapActions('feed', ['getFeedSuggestion']),
+    ...mapActions('feed', ['getFeedSuggestion', 'getFeedByCategory']),
   },
 };
 </script>
