@@ -6,13 +6,9 @@
       <img srcset="@/assets/img/IconRight.png" alt="Meey News" class="w-[5px] h-[9px] ml-4" />
     </div>
     <h3 class="mt-8 mb-4 text-grey6">Tất cả chuyên mục</h3>
-    <List :items="leftSide"></List>
-    <!-- <div v-for="(item, index) in leftSide" :key="index">
-      {{ item.name }}
-    </div>
-    <h1>tada</h1> -->
+    <CategoriesList :items="categoriesList" />
 
-    <div class="text-SM  text-grey7">
+    <div class="text-SM  text-grey7 mt-[15rem]">
       <p class="py-1">Về Meey Share</p>
       <p class="py-1">Trợ giúp</p>
       <p class="py-1">Điều khoản sử dụng</p>
@@ -25,7 +21,7 @@
 <script>
 import { mapActions, mapGetters } from "vuex";
 
-import List from './StructureLeft/List.vue';
+import CategoriesList from './leftSide/List.vue';
 export default {
   created() {
     this.getLefSideBar()
@@ -37,14 +33,14 @@ export default {
   },
   computed: {
     ...mapGetters('feed', {
-      leftSide: 'leftSide',
+      categoriesList: 'categoriesList',
     }),
   },
   methods: {
     ...mapActions('feed', ['getLefSideBar']),
   },
   components: {
-    List
+    CategoriesList
   }
 }
 </script>

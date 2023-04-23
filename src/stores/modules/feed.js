@@ -8,7 +8,7 @@ export default {
       page: 0,
       results: [],
     },
-    leftSideBar: {},
+    categories: [],
     feedDetail: null,
     loadingArticleListData: true,
     loadingDetail: true,
@@ -23,7 +23,6 @@ export default {
       } catch (err) {
         console.log('errr', err);
       } finally {
-        console.log('finallyyyy');
         commit('SET_LOADING_ARTICLE_LIST_DATA', false);
       }
     },
@@ -41,12 +40,22 @@ export default {
     async getLefSideBar({ commit }) {
       try {
         const response = await ArticleService.getLefSideBar();
-        console.log(response, '---------------------------------response ArticleService');
-        commit('SET_LEFT_SIDE_BAR', response.data);
+        commit('SET_CATEGORIES', response.data);
       } catch (err) {
         console.log('errr', err);
       } finally {
         commit('SET_LOADING_DETAIL', false);
+      }
+    },
+    async getFeedByCategory({ commit }) {
+      try {
+        const response = await ArticleService.getFeedByCategory();
+        console.log(response, '----------------------------');
+        commit('SET_FEED_SUGGESTION', response.data);
+      } catch (err) {
+        console.log('errr', err);
+      } finally {
+        // commit('SET_LOADING_DETAIL', false);
       }
     },
   },
@@ -65,9 +74,8 @@ export default {
     SET_LOADING_DETAIL(state, isLoading) {
       state.loadingDetail = isLoading;
     },
-    SET_LEFT_SIDE_BAR(state, leftSideBar) {
-      state.leftSideBar = leftSideBar;
-      console.log(leftSideBar, '-------------------------hiiii');
+    SET_CATEGORIES(state, categories) {
+      state.categories = categories;
     },
   },
 
@@ -84,8 +92,8 @@ export default {
     articleDetail: (state) => {
       return state.feedDetail;
     },
-    leftSide: (state) => {
-      return state.leftSideBar;
+    categoriesList: (state) => {
+      return state.categories;
     },
   },
 };

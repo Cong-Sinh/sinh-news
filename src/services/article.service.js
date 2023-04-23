@@ -1,6 +1,6 @@
 import { BaseService } from './base.service';
 import { ErrorWrapper, ResponseWrapper } from './util';
-import { getFeed, getFeedById, letSideBar } from '@/constants/endpoint';
+import { getFeed, getFeedById, letSideBar, getCategory } from '@/constants/endpoint';
 import { API_BASE_URL } from '@/constants/environment';
 
 export class ArticleService extends BaseService {
@@ -35,19 +35,6 @@ export class ArticleService extends BaseService {
 
   static async getLefSideBar(params = {}) {
     const endpoint = `${API_BASE_URL + letSideBar}`;
-    console.log(endpoint, '----------------------- getLefSideBar');
-    try {
-      const response = await this.request().get(endpoint);
-
-      return new ResponseWrapper(response, response.data);
-    } catch (error) {
-      const message = error.response.data ? error.response.data.error : error.response.statusText;
-      throw new ErrorWrapper(error, message);
-    }
-  }
-
-  static async getFeedDetail(feedId) {
-    const endpoint = `${API_BASE_URL + getFeedById + feedId}`;
     try {
       const response = await this.request().get(endpoint);
       return new ResponseWrapper(response, response.data);
@@ -57,10 +44,14 @@ export class ArticleService extends BaseService {
     }
   }
 
-  static async getFeedDetail(feedId) {
-    const endpoint = `${API_BASE_URL + getFeedById + feedId}`;
+  static async getFeedByCategory(params = {}) {
+    const endpoint = `${API_BASE_URL + getCategory}`;
+    console.log(endpoint);
+
     try {
-      const response = await this.request().get(endpoint);
+      const response = await this.request().post(endpoint);
+      console.log(endpoint, '-------------------------getFeedByCategory');
+
       return new ResponseWrapper(response, response.data);
     } catch (error) {
       const message = error.response.data ? error.response.data.error : error.response.statusText;

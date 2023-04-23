@@ -49,6 +49,10 @@ export default {
     Skeleton,
   },
   created() {
+    const queryUrl = ''
+    if (queryUrl) {
+      this.getFeedByCategory({ limit: 10, page: 1, categorySlug: queryUrl })
+    }
     this.getFeedSuggestion();
   },
   mounted() {

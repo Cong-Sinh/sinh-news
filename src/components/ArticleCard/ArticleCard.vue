@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import { RouterLink } from 'vue-router';
+// import { RouterLink } from 'vue-router';
 
 import AvatarWithName from '@/components/Avatar/AvatarWithName.vue';
 import AvatarWithNameAndTime from '@/components/Avatar/AvatarWithNameAndTime.vue';
