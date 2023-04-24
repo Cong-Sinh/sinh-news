@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import TitleSidebar from '@/components/Sidebar/StructureRight/TitleRight.vue'
-import ContentRight from './StructureRight/ContentRight.vue';
+import TitleSidebar from '@/components/Sidebar/rightSide/TitleRight.vue'
+import ContentRight from './rightSide/ContentRight.vue';
 export default {
   components: {
     ContentRight,

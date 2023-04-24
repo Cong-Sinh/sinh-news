@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Title from '@/components/Sidebar/StructureRight/CategoryIngredient/Title.vue'
+import Title from '@/components/Sidebar/rightSide/CategoryIngredient/Title.vue'
 export default {
 
     components: {

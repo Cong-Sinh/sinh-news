@@ -47,15 +47,15 @@ export default {
         commit('SET_LOADING_DETAIL', false);
       }
     },
-    async getFeedByCategory({ commit }) {
+    async getFeedByCategory({ commit }, payload) {
       try {
-        const response = await ArticleService.getFeedByCategory();
-        console.log(response, '----------------------------');
+        commit('SET_LOADING_ARTICLE_LIST_DATA', true);
+        const response = await ArticleService.getFeedByCategory(payload);
         commit('SET_FEED_SUGGESTION', response.data);
       } catch (err) {
         console.log('errr', err);
       } finally {
-        // commit('SET_LOADING_DETAIL', false);
+        commit('SET_LOADING_ARTICLE_LIST_DATA', false);
       }
     },
   },

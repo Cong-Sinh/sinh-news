@@ -49,11 +49,11 @@ export default {
     Skeleton,
   },
   created() {
-    const queryUrl = ''
-    if (queryUrl) {
-      this.getFeedByCategory({ limit: 10, page: 1, categorySlug: queryUrl })
-    }
-    this.getFeedSuggestion();
+    if (this.categorySlug) {
+      this.getFeedByCategory({ limit: 10, page: 1, categorySlug: this.categorySlug });
+    } else {
+      this.getFeedSuggestion()
+    };
   },
   mounted() {
     // console.log(
@@ -61,14 +61,27 @@ export default {
     //   "----------------------------------------------------------------this.articleList "
     // );
   },
+  watch: {
+    categorySlug: function (currentValue) {
+      if (currentValue) {
+        this.getFeedByCategory({ limit: 10, page: 1, categorySlug: currentValue });
+      } else {
+        this.getFeedSuggestion();
+      }
+    },
+  },
+
   computed: {
     ...mapGetters('feed', {
       articleList: 'articleList',
       isLoading: 'isLoading',
     }),
+    categorySlug() {
+      return this.$route?.query?.category;
+    },
   },
   methods: {
-    ...mapActions('feed', ['getFeedSuggestion']),
+    ...mapActions('feed', ['getFeedSuggestion', 'getFeedByCategory']),
   },
 };
 </script>
