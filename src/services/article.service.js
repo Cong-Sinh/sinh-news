@@ -44,12 +44,17 @@ export class ArticleService extends BaseService {
     }
   }
 
-  static async getFeedByCategory(params = {}) {
-    const endpoint = `${API_BASE_URL + getCategory}`;
-    console.log(endpoint);
+  static async getFeedByCategory(payload = {}) {
+
+    console.log(payload, '---- payload getFeedByCategory service')
+    const endpoint = `${API_BASE_URL + getCategory}/${payload.categorySlug}`;
+    const data = {
+      limit: payload.limit,
+      page: payload.page
+    }
 
     try {
-      const response = await this.request().post(endpoint);
+      const response = await this.request().post(endpoint, data);
       console.log(endpoint, '-------------------------getFeedByCategory');
 
       return new ResponseWrapper(response, response.data);
