@@ -41,6 +41,7 @@ export default {
     Header,
     LeftSidebar,
     RightSidebar,
+
     ArticleCard,
     ShortVideo,
     NewsAround,

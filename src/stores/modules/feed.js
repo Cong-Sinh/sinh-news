@@ -62,6 +62,7 @@ export default {
 
   mutations: {
     SET_FEED_SUGGESTION(state, data) {
+
       state.articleListData = data;
     },
 
