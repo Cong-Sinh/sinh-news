@@ -8,7 +8,11 @@
           <Skeleton />
         </template>
         <template v-else>
-          <ArticleCard v-for="(article, index) in articleList" :key="index" :article="article" />
+          <div>
+
+            <ArticleCard v-for="(article, index) in articleList" :key="index" :article="article" />
+            <InfiniteLoading @infinite="load" />
+          </div>
           <ShortVideo class="pb-8" />
 
           <NewsAround />
@@ -16,10 +20,11 @@
           <VideoCard />
 
           <RecentNews />
+          <RightSidebar />
         </template>
+
       </div>
     </main>
-    <RightSidebar />
   </div>
 </template>
 
@@ -34,9 +39,18 @@ import RecentNews from '@/components/HomePageLocation/RecentNews.vue';
 import VideoCard from '@/components/ArticleCard/VideoCard.vue';
 import Skeleton from '@/components/Skeleton/Skeleton.vue';
 import { mapActions, mapGetters } from 'vuex';
+import axios from 'axios';
+
 export const namespace = 'feed';
 
 export default {
+  data() {
+    return {
+      articels: [],
+      page: 1
+    }
+  },
+
   components: {
     Header,
     LeftSidebar,
@@ -55,12 +69,14 @@ export default {
     } else {
       this.getFeedSuggestion()
     };
+
   },
   mounted() {
     // console.log(
     //   this.articleList,
     //   "----------------------------------------------------------------this.articleList "
     // );
+    // this.fetth()
   },
   watch: {
     categorySlug: function (currentValue) {
@@ -81,8 +97,24 @@ export default {
       return this.$route?.query?.category;
     },
   },
+
   methods: {
+    async fetth() {
+      let articles = await axios.get('article')
+      console.log(articles);
+
+      this.articles = articles.data
+    },
+    handleScrolleftToBottom(isVisible) {
+      if (!isVisible) { return }
+      console.log('abc');
+
+      this.page++
+
+      // this.fetth()
+    },
     ...mapActions('feed', ['getFeedSuggestion', 'getFeedByCategory']),
+
   },
 };
 </script>

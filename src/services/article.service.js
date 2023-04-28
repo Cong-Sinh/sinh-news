@@ -4,7 +4,7 @@ import { getFeed, getFeedById, letSideBar, getCategory } from '@/constants/endpo
 import { API_BASE_URL } from '@/constants/environment';
 
 export class ArticleService extends BaseService {
-  static async getFeedSuggestion(params = {}) {
+  static async getFeedSuggestion(payload) {
     const endpoint = `${API_BASE_URL + getFeed}`;
     try {
       const response = await this.request({ auth: true }).post(endpoint, {

@@ -4,41 +4,44 @@
  * else return clear axios instance
  */
 
-import axios from 'axios'
-import { API_BASE_URL } from "@/constants/environment";
+import axios from 'axios';
+import { API_BASE_URL } from '@/constants/environment';
 // import { AuthService } from '@/services/auth.service'
 
 export class Http {
-  constructor (status) {
+  constructor(status) {
     // this.isAuth = status && status.auth ? status.auth : false
     this.instance = axios.create({
-      baseURL: API_BASE_URL
-    })
+      baseURL: API_BASE_URL,
+    });
 
-    return this.init()
+    return this.init();
   }
 
-  init () {
+  init() {
     if (this.isAuth) {
-      this.instance.interceptors.request.use(request => {
-        // request.headers.authorization = AuthService.getBearer()
-        // if access token expired and refreshToken is exist >> go to API and get new access token
-        // if (AuthService.isAccessTokenExpired() && AuthService.hasRefreshToken()) {
-        //   return AuthService.debounceRefreshTokens()
-        //     .then(response => {
-        //       AuthService.setBearer(response.data.accessToken)
-        //       request.headers.authorization = AuthService.getBearer()
-        //       return request
-        //     }).catch(error => Promise.reject(error))
-        // } else {
-        //   return request
-        // }
-        return request
-      }, error => {
-        return Promise.reject(error)
-      })
+      this.instance.interceptors.request.use(
+        (request) => {
+          // request.headers.authorization = AuthService.getBearer()
+          // if access token expired and refreshToken is exist >> go to API and get new access token
+          // if (AuthService.isAccessTokenExpired() && AuthService.hasRefreshToken()) {
+          //   return AuthService.debounceRefreshTokens()
+          //     .then(response => {
+          //       AuthService.setBearer(response.data.accessToken)
+          //       request.headers.authorization = AuthService.getBearer()
+          //       return request
+          //     }).catch(error => Promise.reject(error))
+          // } else {
+          //   return request
+          // }
+          return request;
+        },
+        (error) => {
+          return Promise.reject(error);
+        },
+      );
     }
 
-    return this.instance
+    return this.instance;
   }
 }

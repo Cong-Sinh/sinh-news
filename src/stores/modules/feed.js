@@ -15,10 +15,10 @@ export default {
   },
 
   actions: {
-    async getFeedSuggestion({ commit }) {
+    async getFeedSuggestion({ commit }, payload) {
       try {
         commit('SET_LOADING_ARTICLE_LIST_DATA', true);
-        const response = await ArticleService.getFeedSuggestion();
+        const response = await ArticleService.getFeedSuggestion(payload);
         commit('SET_FEED_SUGGESTION', response.data);
       } catch (err) {
         console.log('errr', err);
@@ -62,7 +62,6 @@ export default {
 
   mutations: {
     SET_FEED_SUGGESTION(state, data) {
-
       state.articleListData = data;
     },
 
