@@ -7,12 +7,11 @@ export class ArticleService extends BaseService {
   static async getFeedSuggestion(payload) {
     const endpoint = `${API_BASE_URL + getFeed}`;
     try {
-      const response = await this.request({ auth: true }).post(endpoint, {
-        fingerprint: 'fingerprint',
-        limit: 10,
-        page: 1,
-        interaction: true,
-      });
+
+      const clonePayload = {...payload}
+      if (clonePayload && clonePayload.loadMore) delete clonePayload.loadMore
+
+      const response = await this.request({ auth: true }).post(endpoint, clonePayload);
 
       return new ResponseWrapper(response, response.data);
     } catch (error) {
