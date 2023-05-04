@@ -3,7 +3,7 @@
         <div v-for="(item, index) in items" :key="index"
             class="flex items-center font-semibold w-[220px] h-10 cursor-pointer" @click.prevent="onPushParamsToUrl(item)">
             <NameAndColor :name="item.name"
-                :class="['hover:bg-gray-300 py-3 font-normal w-full pl-1', categorySlug === item.slug ? 'bg-gray-300' : '']"
+                :class="['hover:bg-gray-300 py-3 rounded-sm font-normal w-full pl-1', categorySlug === item.slug ? 'bg-gray-300' : '']"
                 :color="`bg-[${item.css.borderColor}]`" />
         </div>
     </div>

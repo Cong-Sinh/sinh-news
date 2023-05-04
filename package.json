@@ -23,6 +23,7 @@
     "vue": "^3.2.47",
     "vue-router": "^4.1.6",
     "vue-skeletor": "^1.0.6",
+    "vue-social-sharing": "^4.0.0-alpha4",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

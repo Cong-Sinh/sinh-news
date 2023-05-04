@@ -1,8 +1,8 @@
 <template>
   <div class="flex justify-around items-center h-[48px] ">
-    <vote vote="278 vote" />
-    <comment comment="bình luận" />
-    <share share="Chia Sẻ" />
+    <vote :vote="vote" />
+    <comment :comment="comment" />
+    <share class="cursor-pointer " share="Chia Sẻ" :article="article" />
   </div>
 </template>
 
@@ -11,10 +11,28 @@ import vote from './CardIngredient/Voted.vue';
 import share from './CardIngredient/Shared.vue';
 import comment from './CardIngredient/Comment.vue';
 export default {
+  props: {
+    comment: {
+      type: String,
+      default: "",
+      required: true
+    },
+    article: {
+      type: String,
+      default: "",
+      require: true,
+    },
+    vote: {
+      type: String,
+      default: "",
+      require: true,
+    }
+
+  },
   components: {
     vote,
     share,
     comment
-  }
+  },
 }
 </script>

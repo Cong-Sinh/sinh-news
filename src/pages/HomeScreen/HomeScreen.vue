@@ -19,7 +19,6 @@
           <RightSidebar />
         </template> -->
         <div>
-
           <ArticleCard v-for="(article, index) in articleList" :key="index" :article="article" />
           <template v-if="articleList?.length > 0">
             <InfiniteLoading @infinite="infiniteHandler" />
@@ -42,7 +41,6 @@ import VideoCard from '@/components/ArticleCard/VideoCard.vue';
 import Skeleton from '@/components/Skeleton/Skeleton.vue';
 import { mapActions, mapGetters, mapState } from 'vuex';
 import InfiniteLoading from 'v3-infinite-loading';
-import axios from 'axios';
 
 
 export const namespace = 'feed';
@@ -102,6 +100,7 @@ export default {
     categorySlug() {
       return this.$route?.query?.category;
     },
+
   },
 
   methods: {
@@ -111,7 +110,7 @@ export default {
       const _payload = { ...this.feedPayload, page: this.feedPayload.page + 1, loadMore: true };
       await this.getFeedSuggestion(_payload);
       state.loaded();
-      this.feedPayload = { ...this.feedPayload, page: this.feedPayload.page + 1 };
+      // this.feedPayload = { ...this.feedPayload, page: this.feedPayload.page + 1 };
     },
   },
 };

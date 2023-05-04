@@ -5,19 +5,15 @@
     <LeftDetail />
 
     <main class="font-font col-span-5 col-start-4 mt-14 mb-7">
-      <div class="flex items-center pt-6 pb-4">
-        <img srcset="@/assets/img/IconHomeDetail.png 2x" alt class="h-4 w[14px]" />
-        <img srcset="@/assets/img/IconLefteDetail.png 2x" alt class="mx-3 w-1 h-[10px]" />
-        <p class="uppercase text-grey4 text-M font-normal">Thị Trường</p>
-      </div>
-
+      <IconLogoDetail :title="articleDetail?.source?.domain" />
       <div class="bg-white pt-4 px-3 rounded-lg">
-        <AvatarWithNameAndTime name="Phạm Đăng Phúc" time="22 phút trước" class="ml-2 text-M" />
+        <AvatarWithNameAndTime :src="articleDetail?.publishedBy?.avatar.url" :name="articleDetail?.publishedBy?.fullname"
+          time="22 phút trước" class="ml-2 text-M" />
 
         <TitleDetaiil :title="articleDetail?.summary" />
         <!-- bài báo -->
 
-        <div v-html="articleDetail?.description"></div>
+        <!-- <div v-html="articleDetail?.description"></div> -->
         <!-- bài báo -->
 
 
@@ -27,6 +23,7 @@
         <!-- bài báo -->
         <div class="bg-grey0 rounded p-4">
 
+          <newspaperLogo :title="articleDetail?.source?.domain" :src="articleDetail?.source?.logo" />
           <div class="font-semibold text-heading6 text-background4 t-4" v-html="articleDetail?.title"></div>
 
           <div class=" pt-3 text-M text-grey8 font-normal   " v-html="articleDetail?.description" />
@@ -89,6 +86,8 @@ import TrendNews from '@/pages/Detail/componentsDetail/TrendNews/TrendNews.vue';
 import CommentDetail from '@/pages/Comment/Comment.vue';
 import RepComment from '@/pages/Comment/RepComment.vue';
 import CommentErorr from '@/pages/Comment/CommentErorr.vue';
+import IconLogoDetail from './componentsDetail/IconLogoDetail.vue';
+import newspaperLogo from './componentsDetail/newspaperLogo.vue';
 import { isFeedId } from '@/utils/number';
 import { mapActions, mapGetters } from 'vuex';
 
@@ -107,6 +106,8 @@ export default {
     CommentDetail,
     RepComment,
     CommentErorr,
+    IconLogoDetail,
+    newspaperLogo
   },
   created() {
     const currentFeedId = this.$route && this.$route.params?.id ? this.$route.params?.id : null;
@@ -114,9 +115,6 @@ export default {
   },
 
   mounted() {
-    setTimeout(() => {
-      // console.log(this.articleDetail, '--------------------------articleDetail')
-    }, 3000)
   },
   computed: {
     ...mapGetters('feed', {
