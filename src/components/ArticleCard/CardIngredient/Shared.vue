@@ -1,5 +1,7 @@
 <template>
-    <div class="flex items-center cursor-pointer relative  ">
+    <!-- <div v-click-outside="hide" @click="toggle">Toggle</div> -->
+    <!-- <div v-show="opened">Popup item</div> -->
+    <div class="flex items-center cursor-pointer relative">
         <button class="flex items-center" @click="() => TogglePopup('buttonTrigger')">
             <img srcset="@/assets/img/share.png 2x" alt="Meey News" class="w-4 h-[13px]" />
             <h3 class="text-M text-primary5 ml-[10px] ">{{ share }}</h3>
@@ -53,11 +55,13 @@
 <script>
 import { mapActions, mapGetters } from 'vuex';
 import { ref } from 'vue';
+import ClickOutside from 'vue-click-outside'
 export default {
     data: function () {
         return {
             title: "Simple Show More & Less Feature Using VueJS",
             showFlag: false,
+            opened: false
         }
     },
     setup() {
@@ -74,10 +78,12 @@ export default {
         }
     },
     mounted() {
-        // setTimeout(() => {
-        //     console.log(article, '----------sdfdsfd');
-        // }, 3000)
+        this.popupItem = this.$el
     },
+    directives: {
+        ClickOutside
+    }
+    ,
     props: {
         article: {
             type: Object,
@@ -108,7 +114,13 @@ export default {
     },
     methods: {
         ...mapActions('feed', ['getFeedDetail']),
+        toggle() {
+            this.opened = true
+        },
 
+        hide() {
+            this.opened = false
+        }
     }
 }
 </script>

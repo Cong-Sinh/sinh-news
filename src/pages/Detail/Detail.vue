@@ -10,27 +10,26 @@
         <AvatarWithNameAndTime :src="articleDetail?.publishedBy?.avatar.url" :name="articleDetail?.publishedBy?.fullname"
           time="22 phút trước" class="ml-2 text-M" />
 
-        <TitleDetaiil :title="articleDetail?.summary" />
-        <!-- bài báo -->
-
-        <!-- <div v-html="articleDetail?.description"></div> -->
+        <TitleDetail :title="articleDetail?.comment" class="text-sm" />
         <!-- bài báo -->
 
 
         <!-- <Article></Article> -->
 
-        <Summary :title="articleDetail?.summary" />
         <!-- bài báo -->
         <div class="bg-grey0 rounded p-4">
 
           <newspaperLogo :title="articleDetail?.source?.domain" :src="articleDetail?.source?.logo" />
           <div class="font-semibold text-heading6 text-background4 t-4" v-html="articleDetail?.title"></div>
 
+          <Summary :summary="articleDetail?.summary" />
+
           <div class=" pt-3 text-M text-grey8 font-normal   " v-html="articleDetail?.description" />
-
-
         </div>
         <!-- bài báo -->
+
+
+        <Share />
 
         <!-- comment post  -->
         <div>
@@ -88,6 +87,7 @@ import RepComment from '@/pages/Comment/RepComment.vue';
 import CommentErorr from '@/pages/Comment/CommentErorr.vue';
 import IconLogoDetail from './componentsDetail/IconLogoDetail.vue';
 import newspaperLogo from './componentsDetail/newspaperLogo.vue';
+import TitleDetail from '@/pages/Detail/TitleDetail/TitleDetail.vue'
 import { isFeedId } from '@/utils/number';
 import { mapActions, mapGetters } from 'vuex';
 
@@ -107,7 +107,8 @@ export default {
     RepComment,
     CommentErorr,
     IconLogoDetail,
-    newspaperLogo
+    newspaperLogo,
+    TitleDetail
   },
   created() {
     const currentFeedId = this.$route && this.$route.params?.id ? this.$route.params?.id : null;

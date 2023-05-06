@@ -1,6 +1,6 @@
 <template>
-    <p class="text-grey7 text-sm italic py-3 font-normal" :summary="summary">
-        {{ summary }}
+    <p class="pl-1 text-text-2 text-grey8 py-3 font-normal" :title="title">
+        {{ title }}
 
     </p>
 </template>
@@ -8,7 +8,7 @@
 <script>
 export default {
     props: {
-        summary: {
+        title: {
             type: String,
             default: "",
             riquery: true

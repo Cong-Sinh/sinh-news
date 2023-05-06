@@ -11,6 +11,7 @@ export default {
       totalResults: 0,
     },
     categories: [],
+    rightBar: {},
     feedDetail: null,
     loadingArticleListData: true,
     loadingDetail: true,
@@ -72,7 +73,6 @@ export default {
     SET_FEED_SUGGESTION(state, data) {
       state.articleListData = data;
     },
-
     SET_LOADING_ARTICLE_LIST_DATA(state, isLoading) {
       state.loadingArticleListData = isLoading;
     },

@@ -3,21 +3,24 @@
     <!-- Title  -->
     <TitleSidebar title="Xu hướng" src="@/assets/img/AvatarLoading.png" />
     <!-- Title  -->
-
-    <ContentRight />
-    <ContentRight />
-    <ContentRight />
+    <ContentRight :items="articleDetail?.feedsRelated" />
 
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import TitleSidebar from '@/components/Sidebar/rightSide/TitleRight.vue'
 import ContentRight from './rightSide/ContentRight.vue';
 export default {
   components: {
     ContentRight,
     TitleSidebar
-  }
+  },
+  computed: {
+    ...mapGetters('feed', {
+      articleDetail: 'articleDetail',
+    }),
+  },
 }
 </script>

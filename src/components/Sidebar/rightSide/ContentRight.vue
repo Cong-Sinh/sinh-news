@@ -1,18 +1,23 @@
 <template>
-    <div class="flex">
-        <Title title="Thị trường đất nền tại các điểm nóng vùng ven vẫn tăng cao" text="1234 tương tác">
-        </Title>
-        <img srcset="@/assets/img/img1-navbar.png 2x" alt="Meey News" class="mb-6" />
+    <div class="flex" v-for="(item, index) in items" :key="index">
+        <Title :title="item?.comment" :text="item?.publishedBy.fullname" />
+        <img :src="item?.thumbnail.url" alt="Meey News" class="mb-6 w-[90px] h-[60px]" />
     </div>
 </template>
 
 <script>
+
 import Title from '@/components/Sidebar/rightSide/CategoryIngredient/Title.vue'
 export default {
-
+    props: {
+        items: {
+            type: Array,
+            default: [],
+        }
+    },
     components: {
         Title
-    }
+    },
 }
 </script>
 

@@ -24,9 +24,9 @@ export default {
             return this.$route?.query?.category;
         },
     },
+
     methods: {
         onPushParamsToUrl(item) {
-            console.log(item, 'item');
             this.$router.push({ path: '/', query: { category: item.slug } });
         },
     },

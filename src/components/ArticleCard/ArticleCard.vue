@@ -11,7 +11,7 @@
       <h3 class="bg-background1 px-4 h-[64px] flex items-center boxshadow-content">{{ article.title }}</h3>
     </router-link>
 
-    <NameAndColor :name="article?.categories?.[name]" color="bg-secondary3"
+    <NameAndColor :name="article?.categories?.[0]?.name" color="bg-secondary3"
       class="tracking-wider text-grey7 uppercase text-S font-medium py-3 px-4 border-b" />
     <CardAction :comment="article?.interaction?.totalComments" :vote="article?.interaction?.totalVotes" :article="article"
       :title="title" />
