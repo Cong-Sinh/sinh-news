@@ -1,7 +1,9 @@
 <template>
   <div class="flex justify-around items-center h-[48px] ">
     <vote :vote="vote" />
-    <comment :comment="comment" />
+    <router-link :to="`/feed/${article.code}`">
+      <comment :comment="comment" />
+    </router-link>
     <share class="cursor-pointer " share="Chia Sẻ" :article="article" />
   </div>
 </template>

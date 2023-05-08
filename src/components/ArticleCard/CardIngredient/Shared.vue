@@ -82,8 +82,6 @@
   </div>
 </template>
 
-
-
 <script>
 import { mapActions, mapGetters } from 'vuex';
 import vClickOutside from 'click-outside-vue3';
