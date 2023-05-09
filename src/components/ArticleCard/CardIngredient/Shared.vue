@@ -6,19 +6,9 @@
     </button>
 
     <Transition>
-      <div
-        class="absolute right-[-100%] mb-[14.5rem] rounded-lg shadow-lg w-[14rem] Popup bg-white down"
-        v-if="opened"
-      >
-        <ShareNetwork
-          network="facebook"
-          :url="article?.link"
-          :title="article?.title"
-          :description="article?.description"
-          quote
-          hashtags
-          class="flex items-center rounded-lg p-2 m-2 hover:bg-background6"
-        >
+      <div class="absolute right-[-100%] mb-[14.5rem] rounded-lg shadow-lg w-[14rem] Popup bg-white down" v-if="opened">
+        <ShareNetwork network="facebook" :url="article?.link" :title="article?.title" :description="article?.description"
+          quote hashtags class="flex items-center rounded-lg p-2 m-2 hover:bg-background6">
           <img srcset="@/assets/img/ShareFb.png 2x" alt class="ml-1 mr-2" />
           <p class="text-background4 text-M">Chia sẻ lên Facebook</p>
         </ShareNetwork>
@@ -30,48 +20,23 @@
           <img srcset="@/assets/img/ShareGB.png 2x" alt class="ml-1 mr-2" />
           <p class="text-background4 text-M">Sao chép liên kết</p>
         </div>
-        <img
-          @click.prevent="showFlag = !showFlag"
-          v-if="showFlag === false ? true : ''"
-          srcset="@/assets/img/ShareDown.png 2x"
-          alt
-          class="m-auto p-3"
-        />
+        <img @click.prevent="showFlag = !showFlag" v-if="showFlag === false ? true : ''"
+          srcset="@/assets/img/ShareDown.png 2x" alt class="m-auto p-3" />
 
         <div class="mb-1 gray-bg" v-show="showFlag">
-          <ShareNetwork
-            network="Messenger"
-            :url="article?.link"
-            title
-            description
-            quote
-            hashtags
-            class="flex items-center rounded-lg p-2 m-2 hover:bg-background6"
-          >
+          <ShareNetwork network="Messenger" :url="article?.link" title description quote hashtags
+            class="flex items-center rounded-lg p-2 m-2 hover:bg-background6">
             <img src alt class="ml-1 mr-2" />
             <p class="text-background4 text-M">Chia sẻ lên Messenger</p>
           </ShareNetwork>
-          <ShareNetwork
-            network="WhatsApp"
-            :url="article?.link"
-            title="  "
-            description
-            quote
-            hashtags
-            class="flex items-center rounded-lg p-2 m-2 hover:bg-background6"
-          >
+          <ShareNetwork network="WhatsApp" :url="article?.link" title="  " description quote hashtags
+            class="flex items-center rounded-lg p-2 m-2 hover:bg-background6">
             <img srcset="@/assets/img/ShareFb.png 2x" alt class="ml-1 mr-2" />
             <p class="text-background4 text-M">Chia sẻ lên WhatsApp</p>
           </ShareNetwork>
-          <ShareNetwork
-            network="telegram"
-            :url="article?.link"
-            :title="article?.title"
-            :description="article?.description"
-            quote
-            hashtags
-            class="flex items-center rounded-lg p-2 m-2 hover:bg-background6"
-          >
+          <ShareNetwork network="telegram" :url="article?.link" :title="article?.title"
+            :description="article?.description" quote hashtags
+            class="flex items-center rounded-lg p-2 m-2 hover:bg-background6">
             <img srcset="@/assets/img/ShareFb.png 2x" alt class="ml-1 mr-2" />
             <p class="text-background4 text-M">Chi sẻ lên Telegram</p>
           </ShareNetwork>

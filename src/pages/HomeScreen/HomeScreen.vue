@@ -2,7 +2,7 @@
 <template>
   <div class="grid grid-cols-12 bg-background1 font-font">
     <LeftSidebar />
-    <main class="font-font col-span-5 col-start-4 mt-14">
+    <main class="font-font col-span-5 col-start-4 mt-7">
       <div class="py-8">
         <!-- <template v-if="isLoading">
           <Skeleton />
@@ -18,6 +18,8 @@
           <RecentNews />
           <RightSidebar />
         </template> -->
+
+        <PostArticle />
         <div>
           <ArticleCard v-for="(article, index) in articleList" :key="index" :article="article" />
           <template v-if="articleList?.length > 0">
@@ -39,8 +41,10 @@ import NewsAround from '@/components/HomePageLocation/NewsAround.vue';
 import RecentNews from '@/components/HomePageLocation/RecentNews.vue';
 import VideoCard from '@/components/ArticleCard/VideoCard.vue';
 import Skeleton from '@/components/Skeleton/Skeleton.vue';
+import PostArticle from '@/components/PostArticle/PostArticle.vue';
 import { mapActions, mapGetters, mapState } from 'vuex';
 import InfiniteLoading from 'v3-infinite-loading';
+import ModalPost from '@/components/PostArticle/ModalPost/ModalPost.vue';
 
 
 export const namespace = 'feed';
@@ -68,6 +72,8 @@ export default {
     RecentNews,
     VideoCard,
     Skeleton,
+    PostArticle,
+    ModalPost
   },
   created() {
     if (this.categorySlug) {
