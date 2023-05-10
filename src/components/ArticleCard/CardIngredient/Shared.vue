@@ -105,7 +105,6 @@ export default {
     },
 
     hide() {
-      console.log('hide');
       this.opened = false;
     },
   },
