@@ -40,7 +40,7 @@
             <img srcset="@/assets/img/ShareFb.png 2x" alt class="ml-1 mr-2" />
             <p class="text-background4 text-M">Chi sẻ lên Telegram</p>
           </ShareNetwork>
-          <button class="flex justify-center px-[45%]" @click="showFlag = false">Ẩn</button>
+          <button class="flex mx-auto" @click="showFlag = false">Thu nhỏ</button>
         </div>
       </div>
     </Transition>
