@@ -44,7 +44,7 @@ import Skeleton from '@/components/Skeleton/Skeleton.vue';
 import PostArticle from '@/components/PostArticle/PostArticle.vue';
 import { mapActions, mapGetters, mapState } from 'vuex';
 import InfiniteLoading from 'v3-infinite-loading';
-import ModalPost from '@/components/PostArticle/ModalPost/ModalPost.vue';
+import ModalPost from '@/components/PostArticle/PostModal/ModalPost.vue';
 
 
 export const namespace = 'feed';

@@ -19,7 +19,7 @@
 <script>
 import vClickOutside from 'click-outside-vue3';
 
-import ModalPost from './ModalPost/ModalPost.vue';
+import ModalPost from './PostModal/ModalPost.vue';
 
 export default {
 

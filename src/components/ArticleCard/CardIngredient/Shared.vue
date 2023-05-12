@@ -26,18 +26,18 @@
         <div class="mb-1 gray-bg" v-show="showFlag">
           <ShareNetwork network="Messenger" :url="article?.link" title description quote hashtags
             class="flex items-center rounded-lg p-2 m-2 hover:bg-background6">
-            <img src alt class="ml-1 mr-2" />
+            <img src="@/assets/img/messenger.png" alt class="ml-1 mr-2" />
             <p class="text-background4 text-M">Chia sẻ lên Messenger</p>
           </ShareNetwork>
           <ShareNetwork network="WhatsApp" :url="article?.link" title="  " description quote hashtags
             class="flex items-center rounded-lg p-2 m-2 hover:bg-background6">
-            <img srcset="@/assets/img/ShareFb.png 2x" alt class="ml-1 mr-2" />
+            <img src="@/assets/img/whatsApp.png" alt class="ml-1 mr-2" />
             <p class="text-background4 text-M">Chia sẻ lên WhatsApp</p>
           </ShareNetwork>
           <ShareNetwork network="telegram" :url="article?.link" :title="article?.title"
             :description="article?.description" quote hashtags
             class="flex items-center rounded-lg p-2 m-2 hover:bg-background6">
-            <img srcset="@/assets/img/ShareFb.png 2x" alt class="ml-1 mr-2" />
+            <img src="@/assets/img/tele.png" alt class="ml-1 mr-2" />
             <p class="text-background4 text-M">Chi sẻ lên Telegram</p>
           </ShareNetwork>
           <button class="flex mx-auto" @click="showFlag = false">Thu nhỏ</button>
