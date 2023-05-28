@@ -1,19 +1,12 @@
 <template>
   <div class="bg-white rounded-lg mb-5 shadow">
     <div class="pt-4 px-4">
-      <AvatarWithNameAndTime
-        src="@/assets/img/avatar.png 2x"
-        name="Phạm Quang Phúc"
-        time="15 phút trước"
-        titleClass="text-sm"
-        class="mb-3"
-      />
+      <AvatarWithNameAndTime src="@/assets/img/avatar.png 2x" name="Phạm Quang Phúc" time="15 phút trước"
+        titleClass="text-sm" class="mb-3" />
       <p class="text-background4 text-M font-normal leading-5 pb-2">
         Nhưng khi thị trường khó khăn, xu hướng dòng tiền sẽ đổ về những sản phẩm có mức giá phù hợp với nhu cầu
         thực của người dân và có giá trị thực.
-        <strong
-          class="text-M text-grey5 font-normal cursor-pointer"
-        >xem thêm</strong>
+        <strong class="text-M text-grey5 font-normal cursor-pointer">xem thêm</strong>
       </p>
     </div>
     <img srcset="@/assets/img/VideoCard.png 2x" alt="Meey News Video" class="w-full" />

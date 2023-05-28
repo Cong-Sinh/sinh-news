@@ -1,28 +1,18 @@
 
 <template>
-  <div class="grid grid-cols-12 bg-background1 font-font">
+  <Header />
+  <div class="grid grid-cols-12 bg-background1 font-font ">
     <LeftSidebar />
-    <main class="font-font col-span-5 col-start-4 mt-14">
-      <div class="py-8">
-        <template v-if="isLoading">
-          <Skeleton />
-        </template>
-        <template v-else>
-          <div>
-
-            <ArticleCard v-for="(article, index) in articleList" :key="index" :article="article" />
-            <InfiniteLoading @infinite="load" />
-          </div>
-          <ShortVideo class="pb-8" />
-
-          <NewsAround />
-
-          <VideoCard />
-
-          <RecentNews />
-          <RightSidebar />
-        </template>
-
+    <main
+      class=" mt-7  font-font col-span-5 col-start-4 max-[760px]:col-span-12 max-[760px]:col-start-0  max-[760px]:mt-0">
+      <div class="py-8 max-[760px]:py-0">
+        <PostArticle class="max-[760px]:hidden" />
+        <div>
+          <ArticleCard v-for="(article, index) in articleList" :key="index" :article="article" />
+          <template v-if="articleList?.length > 0">
+            <InfiniteLoading @infinite="infiniteHandler" />
+          </template>
+        </div>
       </div>
     </main>
   </div>
@@ -38,16 +28,23 @@ import NewsAround from '@/components/HomePageLocation/NewsAround.vue';
 import RecentNews from '@/components/HomePageLocation/RecentNews.vue';
 import VideoCard from '@/components/ArticleCard/VideoCard.vue';
 import Skeleton from '@/components/Skeleton/Skeleton.vue';
-import { mapActions, mapGetters } from 'vuex';
-import axios from 'axios';
+import PostArticle from '@/components/PostArticle/PostArticle.vue';
+import { mapActions, mapGetters, mapState } from 'vuex';
+import InfiniteLoading from 'v3-infinite-loading';
+import ModalPost from '@/components/PostArticle/PostModal/ModalPost.vue';
+
 
 export const namespace = 'feed';
 
 export default {
   data() {
     return {
-      articels: [],
-      page: 1
+      feedPayload: {
+        fingerprint: 'fingerprint',
+        interaction: true,
+        limit: 10,
+        page: 1,
+      }
     }
   },
 
@@ -55,40 +52,40 @@ export default {
     Header,
     LeftSidebar,
     RightSidebar,
-
+    InfiniteLoading,
     ArticleCard,
     ShortVideo,
     NewsAround,
     RecentNews,
     VideoCard,
     Skeleton,
+    PostArticle,
+    ModalPost,
   },
   created() {
     if (this.categorySlug) {
       this.getFeedByCategory({ limit: 10, page: 1, categorySlug: this.categorySlug });
     } else {
-      this.getFeedSuggestion()
+      this.getFeedSuggestion(this.feedPayload)
     };
 
   },
   mounted() {
-    // console.log(
-    //   this.articleList,
-    //   "----------------------------------------------------------------this.articleList "
-    // );
-    // this.fetth()
   },
   watch: {
     categorySlug: function (currentValue) {
       if (currentValue) {
         this.getFeedByCategory({ limit: 10, page: 1, categorySlug: currentValue });
       } else {
-        this.getFeedSuggestion();
+        this.getFeedSuggestion(this.feedPayload);
       }
     },
   },
 
   computed: {
+    ...mapState('feed', {
+      articleListData: 'articleListData',
+    }),
     ...mapGetters('feed', {
       articleList: 'articleList',
       isLoading: 'isLoading',
@@ -96,25 +93,18 @@ export default {
     categorySlug() {
       return this.$route?.query?.category;
     },
+
   },
 
   methods: {
-    async fetth() {
-      let articles = await axios.get('article')
-      console.log(articles);
-
-      this.articles = articles.data
-    },
-    handleScrolleftToBottom(isVisible) {
-      if (!isVisible) { return }
-      console.log('abc');
-
-      this.page++
-
-      // this.fetth()
-    },
     ...mapActions('feed', ['getFeedSuggestion', 'getFeedByCategory']),
-
+    async infiniteHandler(state) {
+      if (this.feedPayload.page >= this.articleListData.totalPages) return state.complete();
+      const _payload = { ...this.feedPayload, page: this.feedPayload.page + 1, loadMore: true };
+      await this.getFeedSuggestion(_payload);
+      state.loaded();
+      // this.feedPayload = { ...this.feedPayload, page: this.feedPayload.page + 1 };
+    },
   },
 };
 </script>

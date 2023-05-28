@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center">
-    <img srcset="@/assets/img/avatar.png 2x" alt="Meey News" :class="['mr-1', height, width]" />
-    <p :class="titleClass">{{ name }}</p>
+    <img :src="src" alt="Meey News" :class="['mr-3, rounded-xl', height, width]" />
+    <p :class="['ml-3']">{{ name }}</p>
   </div>
 </template>
 <script>
@@ -33,6 +33,10 @@ export default {
       type: String,
       default: "h-6",
     },
+    src: {
+      type: Object,
+      default: {}
+    }
   },
 };
 </script>

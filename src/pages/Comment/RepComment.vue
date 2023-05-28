@@ -6,7 +6,7 @@
 
         <div class="">
             <div class="flex justify-between items-center">
-                <AvatarWithNameAndTime name="Hoàng Anh Tuấn" time="15 phút trước" />
+                <AvatarWithNameAndTime name="hi" time="15 phút trước" />
                 <img srcset="@/assets/img/seeMore.png 2x" alt="">
             </div>
             <content-comment-detail comment=" Đó là do tâm lý cũ. Vì giá nhà mặt đất mà thấp hơn giá căn hộ là biết cuộc sống
@@ -40,8 +40,18 @@
 import AvatarWithNameAndTime from '@/components/Avatar/AvatarWithNameAndTime.vue';
 import ContentCommentDetail from './structureComment/ContentComment.vue';
 import Voted from '@/components/ArticleCard/CardIngredient/Voted.vue';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
+    computed: {
+        ...mapGetters('feed', {
+            articleDetail: 'articleDetail',
+            isLoading: 'loadingDetail',
+        }),
+    },
+    methods: {
+        ...mapActions('feed', ['getFeedDetail']),
+    },
     components: { AvatarWithNameAndTime, ContentCommentDetail, Voted }
 }
 </script>

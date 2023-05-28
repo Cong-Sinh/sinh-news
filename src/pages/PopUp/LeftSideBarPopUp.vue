@@ -25,7 +25,7 @@ import Vote from '@/pages/Detail/componentsDetail/LeftSideBar/Vote.vue'
 export default {
     components: {
         Vote
-    }
+    },
 }
 </script>
 

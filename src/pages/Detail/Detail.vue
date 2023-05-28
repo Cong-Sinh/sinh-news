@@ -1,39 +1,41 @@
 <template>
-  <Header />
+  <Header class="max-[768px]:hidden" />
 
-  <div class="grid grid-cols-12 bg-background1 font-font">
-    <LeftDetail />
+  <div class="grid grid-cols-12 bg-background1 font-font pt-14 max-[768px]:pt-0 max-[768px]:grid-cols-1 ">
 
-    <main class="font-font col-span-5 col-start-4 mt-14 mb-7">
-      <div class="flex items-center pt-6 pb-4">
-        <img srcset="@/assets/img/IconHomeDetail.png 2x" alt class="h-4 w[14px]" />
-        <img srcset="@/assets/img/IconLefteDetail.png 2x" alt class="mx-3 w-1 h-[10px]" />
-        <p class="uppercase text-grey4 text-M font-normal">Thị Trường</p>
-      </div>
+    <LeftDetail class="max-[768px]:hidden" />
 
+    <main class="font-font col-span-5 col-start-4 mt-140 mb-7 ">
+      <router-link to="/">
+        <IconLogoDetail :title="articleDetail?.categories?.[0]?.name" />
+      </router-link>
       <div class="bg-white pt-4 px-3 rounded-lg">
-        <AvatarWithNameAndTime name="Phạm Đăng Phúc" time="22 phút trước" class="ml-2 text-M" />
+        <AvatarWithNameAndTime :src="articleDetail?.publishedBy?.avatar.url" :name="articleDetail?.publishedBy?.fullname"
+          time="22 phút trước" class="ml-2 text-M" />
 
-        <TitleDetaiil :title="articleDetail?.summary" />
-        <!-- bài báo -->
-
-        <div v-html="articleDetail?.description"></div>
+        <TitleDetail :title="articleDetail?.comment" class="text-sm" />
         <!-- bài báo -->
 
 
         <!-- <Article></Article> -->
 
-        <Summary :title="articleDetail?.summary" />
         <!-- bài báo -->
         <div class="bg-grey0 rounded p-4">
 
+          <newspaperLogo :title="articleDetail?.source?.domain" :src="articleDetail?.source?.logo" />
           <div class="font-semibold text-heading6 text-background4 t-4" v-html="articleDetail?.title"></div>
 
+          <Summary :summary="articleDetail?.summary" />
+
           <div class=" pt-3 text-M text-grey8 font-normal   " v-html="articleDetail?.description" />
-
-
         </div>
         <!-- bài báo -->
+
+
+        <Share />
+
+        <TrendNews :items="articleDetail?.feedsRelated" />
+
 
         <!-- comment post  -->
         <div>
@@ -54,6 +56,7 @@
 
           <!-- comment post  -->
 
+
           <!-- comment -->
           <CommentErorr />
           <CommentDetail />
@@ -73,6 +76,7 @@
       </div>
     </main>
     <RightSidebar class="mt-[4.5rem] font-semibold" />
+
   </div>
 </template>
 
@@ -89,6 +93,9 @@ import TrendNews from '@/pages/Detail/componentsDetail/TrendNews/TrendNews.vue';
 import CommentDetail from '@/pages/Comment/Comment.vue';
 import RepComment from '@/pages/Comment/RepComment.vue';
 import CommentErorr from '@/pages/Comment/CommentErorr.vue';
+import IconLogoDetail from './componentsDetail/IconLogoDetail.vue';
+import newspaperLogo from './componentsDetail/newspaperLogo.vue';
+import TitleDetail from '@/pages/Detail/TitleDetail/TitleDetail.vue'
 import { isFeedId } from '@/utils/number';
 import { mapActions, mapGetters } from 'vuex';
 
@@ -107,6 +114,9 @@ export default {
     CommentDetail,
     RepComment,
     CommentErorr,
+    IconLogoDetail,
+    newspaperLogo,
+    TitleDetail
   },
   created() {
     const currentFeedId = this.$route && this.$route.params?.id ? this.$route.params?.id : null;
@@ -114,9 +124,6 @@ export default {
   },
 
   mounted() {
-    setTimeout(() => {
-      // console.log(this.articleDetail, '--------------------------articleDetail')
-    }, 3000)
   },
   computed: {
     ...mapGetters('feed', {

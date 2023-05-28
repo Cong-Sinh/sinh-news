@@ -11,6 +11,7 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "@vueuse/core": "^10.1.0",
     "axios": "^1.3.5",
+    "click-outside-vue3": "^4.0.1",
     "dotenv": "^16.0.3",
     "lodash": "^4.17.21",
     "prettier": "^2.8.7",
@@ -18,11 +19,14 @@
     "sass": "^1.60.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^9.2.0",
+    "v-click-outside": "^3.2.0",
     "v-tooltip": "^2.1.3",
     "v3-infinite-loading": "^1.2.2",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6",
     "vue-skeletor": "^1.0.6",
+    "vue-social-sharing": "^4.0.0-alpha4",
+    "vue-textarea-autosize": "^1.1.1",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

@@ -1,7 +1,13 @@
 <template>
     <div class>
-        <h3 class="w-[186px] mr-3 text-M text-background4 font-medium content-navbar-right mb-1"> {{ title }}</h3>
-        <p class="text-S text-grey3 font-normal">{{ text }}</p>
+        <h3 class="w-[186px] mr-3 text-M text-background4 font-medium content-navbar-right mb-1" :title="title"> {{ title }}
+        </h3>
+        <div class="text-S text-grey3 font-normal flex">
+            <p class="pr-1">đăng bởi </p>
+            <p>{{ text }}</p>
+
+        </div>
+
     </div>
 </template>
 
@@ -23,7 +29,7 @@ export default {
             default: "",
             required: true
         }
-    }
+    },
 }
 </script>
 

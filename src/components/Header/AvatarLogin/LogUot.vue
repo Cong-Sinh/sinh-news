@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center">
-        <img src="@/assets/img/UserLogin.png" alt="Meey News" class="w-9 h-9" />
+        <img src="@/assets/img/UserLogin.png" alt="Meey News" class="w-9 h-9 max-[760px]:w-6 max-[760px]:h-6" />
         <img srcset="@/assets/img/IconUserDown.png 2x" alt="" class="ml-[6px] text-primary5 mr-[36px]">
     </div>
 </template>

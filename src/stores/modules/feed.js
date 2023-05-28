@@ -7,19 +7,28 @@ export default {
       limit: 0,
       page: 0,
       results: [],
+      totalPages: 0,
+      totalResults: 0,
     },
     categories: [],
+    rightBar: {},
     feedDetail: null,
     loadingArticleListData: true,
     loadingDetail: true,
   },
 
   actions: {
-    async getFeedSuggestion({ commit }, payload) {
+    async getFeedSuggestion({ commit, state }, payload) {
       try {
         commit('SET_LOADING_ARTICLE_LIST_DATA', true);
         const response = await ArticleService.getFeedSuggestion(payload);
-        commit('SET_FEED_SUGGESTION', response.data);
+        let results = [];
+        if (payload.loadMore) {
+          results = [...state.articleListData.results, ...response.data.results];
+        } else {
+          results = response.data.results;
+        }
+        commit('SET_FEED_SUGGESTION', { ...response.data, results: results });
       } catch (err) {
         console.log('errr', err);
       } finally {
@@ -64,7 +73,6 @@ export default {
     SET_FEED_SUGGESTION(state, data) {
       state.articleListData = data;
     },
-
     SET_LOADING_ARTICLE_LIST_DATA(state, isLoading) {
       state.loadingArticleListData = isLoading;
     },
