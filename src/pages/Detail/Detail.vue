@@ -1,11 +1,14 @@
 <template>
-  <Header />
+  <Header class="max-[768px]:hidden" />
 
-  <div class="grid grid-cols-12 bg-background1 font-font">
-    <LeftDetail />
+  <div class="grid grid-cols-12 bg-background1 font-font pt-14 max-[768px]:pt-0 max-[768px]:grid-cols-1 ">
 
-    <main class="font-font col-span-5 col-start-4 mt-14 mb-7">
-      <IconLogoDetail :title="articleDetail?.source?.domain" />
+    <LeftDetail class="max-[768px]:hidden" />
+
+    <main class="font-font col-span-5 col-start-4 mt-140 mb-7 ">
+      <router-link to="/">
+        <IconLogoDetail :title="articleDetail?.categories?.[0]?.name" />
+      </router-link>
       <div class="bg-white pt-4 px-3 rounded-lg">
         <AvatarWithNameAndTime :src="articleDetail?.publishedBy?.avatar.url" :name="articleDetail?.publishedBy?.fullname"
           time="22 phút trước" class="ml-2 text-M" />
@@ -31,6 +34,9 @@
 
         <Share />
 
+        <TrendNews :items="articleDetail?.feedsRelated" />
+
+
         <!-- comment post  -->
         <div>
           <div class="flex justify-between pt-[2rem] pb-[1rem]">
@@ -49,6 +55,7 @@
             class="h-11 w-full border p-7 outline-none rounded-lg my-4" />
 
           <!-- comment post  -->
+
 
           <!-- comment -->
           <CommentErorr />
@@ -69,6 +76,7 @@
       </div>
     </main>
     <RightSidebar class="mt-[4.5rem] font-semibold" />
+
   </div>
 </template>
 

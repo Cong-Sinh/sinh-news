@@ -19,7 +19,6 @@
             </ShareNetwork>
 
         </div>
-        {{ }}
     </div>
 </template>
 

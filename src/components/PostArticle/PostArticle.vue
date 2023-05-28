@@ -1,5 +1,5 @@
 <template>
-    <div class="rounded-lg h-14 shadow-md bg-white my-5 flex w-full">
+    <div class="rounded-lg h-14 shadow-md bg-white flex w-full  my-5 max-[760px]:my-0">
 
         <div class=" flex my-auto justify-between " @click="opened = true">
             <img srcset="@/assets/img/IconDantri.png 2x" alt="" class="rounded-full w-9 h-9 mr-2 ml-4">
@@ -24,6 +24,7 @@ import ModalPost from './PostModal/ModalPost.vue';
 export default {
 
     components: { ModalPost },
+
     directives: {
         clickOutside: vClickOutside.directive,
     },

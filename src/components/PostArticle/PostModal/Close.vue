@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <div class="bg-white shadow-list z-5 min-w-[20rem] text-center min-h-[10.5rem] rounded-xl px-4 pb-4 pt-5"
         v-click-outside="onClickOutside">
         <img src="@/assets/img/CloseGray.png" alt="" class="float-right cursor-pointer p-1">
@@ -58,7 +58,7 @@ export default {
 }
 </script>
 
-<style></style> -->
+<style></style> 
 
 <!-- <transition>
     <template v-if="opened">
@@ -81,4 +81,4 @@ export default {
             </div>
         </div>
     </template>
-</transition> -->
+</transition>

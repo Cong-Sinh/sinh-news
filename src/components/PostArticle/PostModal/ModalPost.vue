@@ -36,7 +36,6 @@
                             <button class="flex justify-between items-center  h-10  px-4  w-full">
                                 <div>BĐS thường ngày</div>
                             </button>
-
                         </div>
                     </div>
 
@@ -80,8 +79,11 @@
                         </button>
                     </div>
 
-                    <button :class="[disableButton ? styleObjectActive : '']" :style="[styleObjectActive, styleObject]"
-                        class=" h-11 rounded-2xl gh w-full ">Đăng</button>
+                    <transition>
+                        <button v-if="disableButton" :disableButton="disableButton ? styleObjectActive : ''"
+                            :style="[styleObject, styleObjectActive]"
+                            class=" z-20 h-11 rounded-2xl gh w-full ">Đăng</button>
+                    </transition>
                 </div>
             </div>
         </div>
@@ -96,11 +98,6 @@ export default {
     components: {
         TextareaAutosize,
         // Close
-    },
-    methods: {
-        switchSelect(event) {
-            this.selected = event.target.value;
-        }
     },
     directives: {
         clickOutside: vClickOutside.directive,
@@ -124,7 +121,7 @@ export default {
     },
     computed: {
         disableButton() {
-            return !this.message || this.message.length === 0
+            return this.message || !this.message.length === 0
         }
     },
     watch: {
@@ -133,6 +130,7 @@ export default {
                 this.showFlag = false;
             }
         },
+
     },
     methods: {
         handleCloseModal() {
@@ -148,6 +146,9 @@ export default {
         hide() {
             this.opened = false;
         },
+        switchSelect(event) {
+            this.selected = event.target.value;
+        }
     }
 }
 </script>

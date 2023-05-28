@@ -77,6 +77,14 @@ module.exports = {
         list: '0px 5px 15px 1px rgba(0, 0, 0, 0.1)',
       },
     },
+    screens: {
+      tablet: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      laptop: '1024px',
+
+      desktop: '1280px',
+    },
   },
   plugins: [require('@tailwindcss/line-clamp')],
 };

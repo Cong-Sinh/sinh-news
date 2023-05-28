@@ -6,7 +6,7 @@
   <!-- <PopUp /> -->
 
   <!-- <LoadingPage /> -->
-  <Header />
+  <OpenApp class=" min-[760px]:hidden" />
 
   <router-view v-slot="{ Component }" :key="$route.path">
     <template v-if="Component">
@@ -29,6 +29,7 @@ import Main from "./layouts/Main.vue";
 import Detail from "./pages/Detail/Detail.vue";
 import HomeShare from "./pages/HomeShare/Share.vue";
 import PopUp from "./pages/PopUp/PopUp.vue";
+import OpenApp from "./components/OpenApp/OpenApp.vue";
 
 export default {
   name: "App",
@@ -39,6 +40,7 @@ export default {
     Detail,
     HomeShare,
     PopUp,
+    OpenApp
   },
 };
 </script>

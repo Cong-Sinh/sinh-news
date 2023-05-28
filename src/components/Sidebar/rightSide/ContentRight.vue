@@ -1,6 +1,6 @@
 <template>
     <router-link :to="`/feed/${item.code}`" class="flex" v-for="(item, index) in items" :key="index">
-        <Title :title="item?.comment" :text="item?.publishedBy.fullname" />
+        <Title :title="item?.title" :text="item?.publishedBy.fullname" />
         <img :src="item?.thumbnail.url" alt="Meey News" class="mb-6 w-[90px] h-[60px]" />
     </router-link>
 </template>

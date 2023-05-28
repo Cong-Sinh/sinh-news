@@ -1,25 +1,12 @@
 
 <template>
-  <div class="grid grid-cols-12 bg-background1 font-font">
+  <Header />
+  <div class="grid grid-cols-12 bg-background1 font-font ">
     <LeftSidebar />
-    <main class="font-font col-span-5 col-start-4 mt-7">
-      <div class="py-8">
-        <!-- <template v-if="isLoading">
-          <Skeleton />
-        </template>
-        <template v-else>
-
-          <ShortVideo class="pb-8" />
-
-          <NewsAround />
-
-          <VideoCard />
-
-          <RecentNews />
-          <RightSidebar />
-        </template> -->
-
-        <PostArticle />
+    <main
+      class=" mt-7  font-font col-span-5 col-start-4 max-[760px]:col-span-12 max-[760px]:col-start-0  max-[760px]:mt-0">
+      <div class="py-8 max-[760px]:py-0">
+        <PostArticle class="max-[760px]:hidden" />
         <div>
           <ArticleCard v-for="(article, index) in articleList" :key="index" :article="article" />
           <template v-if="articleList?.length > 0">
@@ -73,7 +60,7 @@ export default {
     VideoCard,
     Skeleton,
     PostArticle,
-    ModalPost
+    ModalPost,
   },
   created() {
     if (this.categorySlug) {
