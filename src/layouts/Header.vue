@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full font-font h-[56px] grid grid-cols-12 items-center fixed max-[760px]:sticky  bg-white z-10">
+  <header class="w-full font-font h-[56px] grid grid-cols-12 items-center fixed max-[760px]:sticky bg-white z-10">
     <!-- top-header -->
     <!-- logo  -->
     <div class="col-span-3">
@@ -18,14 +18,15 @@
 
     <!-- user  -->
     <transition>
-      <div class="flex items-center ml-auto col-span-4 " v-click-outside="hide">
-        <!-- <login title="Đăng nhập" class="group-hover:block none  " /> -->
+      <div class="flex items-center col-span-4 ml-auto" v-click-outside="hide">
+        <!-- <login title="Đăng nhập" class="group-hover:block none " /> -->
         <div
-          class=" inline-block absolute group right-0 h-[41px]  max-[760px]:right-2   max-[760px]:bottom-[-90px] w-[246px] max-[760px]:h-[140px] ">
-          <LogUot @click="toggle" class="ml-[11rem] mb-1 mt-2 cursor-pointer" />
+          class="inline-block absolute group right-0 h-[41px] max-[760px]:right-2 max-[760px]:bottom-[-90px] w-[246px] max-[760px]:h-[140px]"
+        >
+          <LogUot @click="toggle" class="ml-[11rem] mb-1 mt-2 cu`rsor-pointer" />
 
-          <div v-if="opened" class="mr-3 px-3 mt-[.5rem] rounded-lg  bg-white shadow w-full  ">
-            <StructureLoguot name="Nguyễn Tuấn Anh" setting="Quản lý thông tin cá nhân" loguot="Đăng xuât" />
+          <div v-if="opened" class="mr-3 px-3 mt-[.5rem] rounded-lg bg-white shadow w-full">
+            <!-- <StructureLoguot name="Nguyễn Tuấn Anh" setting="Quản lý thông tin cá nhân" loguot="Đăng xuât" /> -->
           </div>
         </div>
       </div>
@@ -37,28 +38,25 @@
 </template>
 
 <script>
-import AvatarHeader from "@/components/Header/AvatarHeader.vue";
-import Login from "@/components/Header/AvatarLogin/Login.vue";
-import LogUot from "@/components/Header/AvatarLogin/LogUot.vue";
-import StructureLoguot from "@/components/Header/AvatarLogin/StructureLoguot.vue";
+import AvatarHeader from '@/components/Header/AvatarHeader.vue';
+import LogUot from '@/components/Header/AvatarLogin/LogUot.vue';
+// import StructureLoguot from '@/components/Header/AvatarLogin/StructureLoguot.vue';
 import vClickOutside from 'click-outside-vue3';
 
 export default {
-
   directives: {
     clickOutside: vClickOutside.directive,
   },
   components: {
     AvatarHeader,
-    Login,
     LogUot,
-    StructureLoguot,
+    // StructureLoguot,
   },
   data() {
     return {
       showFlag: false,
       opened: false,
-    }
+    };
   },
   watch: {
     opened: function (val) {
@@ -73,7 +71,7 @@ export default {
     },
     toggle() {
       this.opened = !this.opened;
-    }
-  }
+    },
+  },
 };
 </script>
